@@ -12,3 +12,47 @@
 
 
 @import "medias" ;
+
+@import "@material/button/mdc-button";
+
+.torq-button, .torq-button--primary {
+  @extend .mdc-button;
+  @include mdc-button-container-fill-color(#02B989);
+  @include mdc-button-ink-color(#ffffff);
+  @include mdc-button-shape-radius(0);
+  @include mdc-states-base-color(rgb(9, 128, 96));
+  @include mdc-states-hover-opacity(.1);
+  @include mdc-states-focus-opacity(.3);
+  @include mdc-states-press-opacity(.4);
+}
+
+.torq-button--secondary {
+  @extend .mdc-button;
+  @include mdc-button-container-fill-color(#909699);
+  @include mdc-button-ink-color(#ffffff);
+  @include mdc-button-shape-radius(0);
+}
+
+.torq-button--outlined, .torq-button--primary-outlined {
+  @extend .mdc-button--outlined;
+  @include mdc-button-ink-color(var(--torq-primary-button-color, #02B989));
+  @include mdc-button-outline-color(var(--torq-primary-button-color, #02B989));
+  @include mdc-button-container-fill-color(transparent);
+  @include mdc-button-shape-radius(0);
+  @include mdc-button-outline-width(1px, 10px);
+  @include mdc-button-horizontal-padding(15px);
+}
+
+.torq-button--secondary-outlined {
+  @extend .mdc-button--outlined;
+  @include mdc-button-ink-color(var(--torq-secondary-button-color, #909699));
+  @include mdc-button-outline-color(var(--torq-secondary-button-color, #909699));
+  @include mdc-button-container-fill-color(transparent);
+  @include mdc-button-shape-radius(0);
+  @include mdc-button-outline-width(1px, 10px);
+  @include mdc-button-horizontal-padding(15px);
+}
+
+.torq-button, .torq-button_secondary, .torq-button--outlined, .torq-button--outlined_secondary {
+  text-transform: none; 
+}

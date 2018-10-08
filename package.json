@@ -21,12 +21,11 @@
     "css-loader": "^1.0.0",
     "extract-loader": "^3.0.0",
     "file-loader": "^2.0.0",
-    "node-sass": "^4.9.3",
-    "sass-loader": "^7.1.0",
-    "webpack": "^3.12.0",
-    "webpack-dev-server": "^2.11.3"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
   },
   "dependencies": {
+    "@material/button": "^0.40.0",
     "material-components-web": "^0.40.0"
   }
 }

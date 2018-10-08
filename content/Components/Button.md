@@ -5,7 +5,7 @@ description = ""
 categories= ["component"]
 +++
 
-  
+<button class="torq-button">Button</button>
  
 
 ## Installation

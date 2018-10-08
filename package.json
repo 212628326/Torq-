@@ -1,0 +1,37 @@
+{
+  "name": "Torq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dato.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/212628326/Torq.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/212628326/Torq/issues"
+  },
+  "homepage": "https://github.com/212628326/Torq#readme",
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "extract-loader": "^3.0.0",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.3"
+  },
+  "dependencies": {
+    "material-components-web": "^0.40.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server"
+  }
+}
+
+

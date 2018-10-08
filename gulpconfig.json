@@ -1,0 +1,9 @@
+{
+  "sassFileSources": ["./static/scss/flex/style.scss"],
+
+  "cssDestFolder": ["./static/theme-flex"],
+
+  "sassOptions": {
+    "includePaths": "./node_modules"
+  }
+}

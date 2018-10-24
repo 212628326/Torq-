@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 var config = require('./gulpconfig.json');
 
 gulp.task('sass', function(){
-  return gulp.src(config.sassFileSources)
+  return gulp.src("./static/scss/flex/style.scss")
   .pipe(sass(config.sassOptions).on('error', sass.logError))
   .pipe(gulp.dest("./static/theme-flex"));
 });

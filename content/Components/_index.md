@@ -1,8 +1,11 @@
 +++
-title= "Components"
+title= "COMPONENTS"
 description = ""
-weight = 3
+weight = 2
+menu = "mainmenu"
+hidden = false
+
 +++
 
 
-{{%children style="card" description="true" %}}
+{{%children style="card" depth="3" description="true" %}}

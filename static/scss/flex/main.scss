@@ -16,7 +16,7 @@ body {
 }
 
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Heebo', sans-serif;
     font-size: 14px;
 }
 
@@ -31,6 +31,7 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     line-height: 1.5rem
+
 }
 
 :disabled {
@@ -71,26 +72,31 @@ section strong {
 
 
 
-
 .nav-select {
     background: #e5e5e5;
     display: none;
 }
 
 .searchbox {
-    margin: 0rem 0rem 0rem 0rem;
+    margin: 0rem 3rem 0rem 0rem;
     padding: 0rem 0rem;
-    padding-top: 1rem;
+    padding-top: .5rem;
     color: #012a3c;
-    text-align: center;
+    text-align: right;
+    width: 70%;
+    float: right;
+
+    
 }
 
 .searchbox input {
-    border: 1px solid #cccccc;
+    border: 1.5px solid #cccccc;
     color: #555555;
+    background-color: #ffffff;
+    
     display: inline-block;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 18px;
     padding-bottom: 6px;
     padding-left: 12px;
     padding-right: 12px;
@@ -151,15 +157,8 @@ section strong {
 
 
 
-
-
-
-
-
-
-
-
-
 .burger {
     display: none;
 }
+
+

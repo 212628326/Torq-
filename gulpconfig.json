@@ -1,5 +1,5 @@
 {
-  "sassFileSources": ["./static/scss/flex/style.scss"],
+  "sassFileSources": ["./static/scss/flex/*.scss"],
 
   "cssDestFolder": ["./static/theme-flex"],
 

@@ -15,13 +15,13 @@
 {{- end}}
 
 <!-- templates -->
-{{- define "section-tree-nav" }}
-{{- $showvisitedlinks := .showvisitedlinks }}
-{{- $currentNode := .currentnode }}
- {{- with .sect}}
-  {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
-    {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
-    {{- safeHTML .Params.head}}
+{{- define "section-tree-nav" }}<!--creates a template called section tree nav-->
+{{- $showvisitedlinks := .showvisitedlinks }}<!--sets a variable to show the visited links-->
+{{- $currentNode := .currentnode }}<!---->
+ {{- with .sect}}<!---->
+  {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}<!---->
+    {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}<!---->
+    {{- safeHTML .Params.head}}<!---->
     <li data-nav-id="{{.URL}}" class="dd-item
         {{- if .IsAncestor $currentNode}} parent{{end}}
         {{- if eq .URL $currentNode.URL}} active{{end}}

@@ -1,165 +1,176 @@
-
-{{ define "main" }}
+ {{ define "main" }}
 
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
 </head>
 
 <body>
-<div class="left">
+    <div class="left">
 
-<h1>{{.Title}}</h1>
-<div class="titlebar">
-    <div class="description"> 
-            {{.Page.Description}}  
-        </div>
-      <!-- Rounded switch -->
-      <div class="darkswitch">
-            
-            <label>Dark Theme</label>
-            <label class="switch"> 
-                <input type="checkbox" id="myCheck" onclick="myFunction()">
-                <span class="slider round"></span>
-            </label>
-        </div>
-</div>
+        <h1>{{.Title}}</h1>
+        <div class="titlebar">
+            <div class="description">
+                {{.Page.Description}}
+            </div>
+            <!-- Rounded switch -->
+            <div class="darkswitch">
 
-
-
-<div class="tab" style= "margin-top: 50px;">
-  <button class="tablinks" onclick="openCity(event, 'torq-component')" id="defaultOpen">Torq Component</button>
-  <button class="tablinks" onclick="openCity(event, 'web-component')">Web Component</button>
-</div>
-
-
-
-
-<!--
-<div class="mdc-tab-bar" role="tablist" >
-    <div class="mdc-tab-scroller">
-        <div class="mdc-tab-scroller__scroll-area">
-            <div class="mdc-tab-scroller__scroll-content">
-                <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true">
-                <span class="mdc-tab__content">
-                    <span class="mdc-tab__text-label">Torq Component</span>
-                </span>
-                <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                </span>
-                <span class="mdc-tab__ripple"></span>
-                </button>
-                <button class="mdc-tab" role="tab" aria-selected="true">
-                <span class="mdc-tab__content">
-                    <span class="mdc-tab__text-label">Web Component</span>
-                </span>
-                <span class="mdc-tab-indicator">
-                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                </span>
-                <span class="mdc-tab__ripple"></span>
-                </button>
+                <label>Dark Theme</label>
+                <div class="mdc-switch" data-mdc-auto-init="MDCSwitch">
+                    <div class="mdc-switch__track"></div>
+                    <div class="mdc-switch__thumb-underlay">
+                        <div class="mdc-switch__thumb">
+                            <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" role="switch" onclick="myFunction()">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+
+
+        <!--TABS TO SELECT BETWEEN TORQ COMPONENTS AND WEB COMPONENTS-->
+        <div class="mdc-tab-bar component" role="tablist" data-mdc-auto-init="MDCTabBar">
+            <div class="mdc-tab-scroller">
+                <div class="mdc-tab-scroller__scroll-area">
+                    <div class="mdc-tab-scroller__scroll-content">
+
+                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" onclick="openCity(event, 'torq-component')" id="defaultOpen">
+                            <span class="mdc-tab__content">
+                                <span class="mdc-tab__text-label">Torq Component</span>
+                            </span>
+                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                            </span>
+                            <span class="mdc-tab__ripple"></span>
+                        </button>
+
+                        <button class="mdc-tab" role="tab" aria-selected="true" onclick="openCity(event, 'web-component')">
+                            <span class="mdc-tab__content">
+                                <span class="mdc-tab__text-label">Web Component</span>
+                            </span>
+                            <span class="mdc-tab-indicator">
+                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                            </span>
+                            <span class="mdc-tab__ripple"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--INITIALIZES THE MDC WEB COMPONENTS USED ON THE PAGE-->
+        <script>
+            mdc.autoInit();
+        </script>
+
+        <!--
+<div class="tab" style= "margin-top: 30px;">
+  <button class="tablinks" onclick="openCity(event, 'torq-component')" id="defaultOpen">Torq Component</button>
+  <button class="tablinks" onclick="openCity(event, 'web-component')">Web Component</button>
 </div>-->
 
 
+        <!--this is the tab content for a standard component-->
+        <div id="torq-component" class="tabcontent">
+            
+
+            <div class="demo">
+                <div id="light"> {{ .Page.Params.lightDemo | safeHTML }} </div>
+                <div id="dark" style="display: none;"> {{ .Page.Params.darkDemo | safeHTML }} </div>
+                <br>
+            </div>
+            {{ .Content }}
+
+            {{ partial "flex/tablecontents.html" . }}
+            
+        </div>
 
 
-<section>
-        <nav id="basic-tabs" class="mdc-tabs">
-          <!-- Note that mdc-ripple-surface is used here for demo purposes only. mdc-tab would mix in the ripple in the actual impl -->
-          <a class="mdc-tab mdc-ripple-surface mdc-tab--active" href="#one">Torq Component</a>
-          <a class="mdc-tab mdc-ripple-surface" href="#two">Web Component</a>
-          <a class="mdc-tab mdc-ripple-surface" href="#three">Three</a>
-          <span class="mdc-tabs__indicator"></span>
-        </nav>
-      </section>
+        <!--this is the tab content for a web component-->
+        <div id="web-component" class="tabcontent" >
 
+            {{$webcomponent := .Title}} 
+            {{$table := .Page.TableOfContents}}
+            {{ range where .Site.Pages "Type" "=" "web" }} 
+            {{ if eq $webcomponent .Title}}
 
+            <div class="demo" >
+                <div id="light"> {{ .Params.lightDemo | safeHTML }} </div>
+                <div id="dark" style="display: none;"> {{ .Params.darkDemo | safeHTML }} </div>
+                <br>
+            </div>
 
+            {{ .Content }} 
+            {{ end }} 
+            {{ end }}
 
-
-
-<!--this is the tab content for a standard component-->
-<div id="torq-component" class="tabcontent"><br>
-<div id ="light"> {{ .Page.Params.lightDemo | safeHTML }} </div>
-<div id ="dark" style ="display: none;"> {{ .Page.Params.darkDemo | safeHTML }} </div><br>
-  {{ .Content }}
-</div>
-
-<!--this is the tab content for a web component-->
-<div id="web-component" class="tabcontent">
-
-{{$webcomponent := .Title}}
-{{ range where .Site.Pages "Type" "=" "web" }}
-{{ if eq $webcomponent .Title}}
-{{ .Content }}
-{{ end }}
-{{ end }}
-</div>
-
-
-
-<!--switches the components from light to dark-->
-<script>
-function myFunction() {
-    var light = document.getElementById("light");
-    var dark = document.getElementById("dark");
-    var checkBox = document.getElementById("myCheck");
+           
     
-    if (checkBox.checked == true){
-        light.style.display = "none";
-        dark.style.display = "block";
-    }
-    else{
-        light.style.display = "block";
-        dark.style.display = "none";
-    }
-    
-    }
-
-    </script>
+            </div>
+        </div>
 
 
+        <!--
+        <div class="right">
 
-<script>
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+                <!-- {{.Page.Params.Author}}-->
+        
+           <!--     <div id="toc">
+                    {{.TableOfContents}}
+                </div>
+        
+            </div>-->
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+        <!--switches the components from light to dark-->
+        <script>
+            function myFunction() {
+                var light = document.getElementById("light");
+                var dark = document.getElementById("dark");
+                var checkBox = document.getElementById("basic-switch");
+
+                if (checkBox.checked == true) {
+                    light.style.display = "none";
+                    dark.style.display = "block";
+                }
+                else {
+                    light.style.display = "block";
+                    dark.style.display = "none";
+                }
+
+            }
+
+        </script>
 
 
-    
-</div>
 
-<div class="right">
+        <script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
 
-    {{.Page.Params.Author}}
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
 
- <div id="toc">
-    {{.TableOfContents}}
+    </div>
 
-</div>
 
-</div>
 </body>
-</html> 
+
+</html>
 
 {{ end }}
-
-

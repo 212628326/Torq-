@@ -3,13 +3,69 @@
 <section class="homepage">
 		<div class="hero-image">
 			   <div class="hero-text">
-				 <h1>{{.Title}}</h1>
+				 <h2>{{.Title}}</h2>
 				
 			   </div>
 			 </div>
 
-<section class="homecontent">
-{{.Site.Home.Content}}
+			 <!--
+			 <div class="hero-image parallax-window" data-parallax="scroll" data-image-src="/images/train.jpg">
+				<div class="hero-text">
+				  <h1>{{.Title}}</h1>
+				 
+				</div>
+			  </div>-->
+
+			 
+<section class="homecontent" >
+
+	{{.Site.Home.Content}}
+
+
+
+		<div class="mdc-layout-grid" data-mdc-auto-init="MDCLayoutGrid">
+				<div class="mdc-layout-grid__inner">
+				  <div class="mdc-layout-grid__cell--span-6">
+
+						<div class="mdc-card--outlined">
+								<a href="/design/">
+									<h3>Design Guidelines</h3>
+								</a>
+							</div>
+				  </div>
+				  <div class="mdc-layout-grid__cell--span-6">
+						<div class="mdc-card--outlined">
+								<a href="/design/">
+									<h3>Design Guidelines</h3>
+								</a>
+							</div>
+
+				  </div>
+				  <div class="mdc-layout-grid__cell--span-6">
+
+						<div class="mdc-card--outlined">
+								<a href="/design/">
+									<h3>Design Guidelines</h3>
+								</a>
+							</div>
+				  </div>
+				  <div class="mdc-layout-grid__cell--span-6">
+
+						<div class="mdc-card--outlined">
+								<a href="/design/">
+									<h3>Design Guidelines</h3>
+								</a>
+							</div>
+				  </div>
+				</div>
+			  </div>
+
+			  <script>
+					mdc.autoInit();
+				</script>
+
+
+
 
 
 

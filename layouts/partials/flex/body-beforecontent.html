@@ -1,25 +1,23 @@
+
 <header>
   <div class="logo" >
     {{ partial "header.html" . }}
   </div>
-
-  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
   
 
   {{- with .Site.Menus.mainmenu}}
   <div class="shortcuts">
 
         {{- range sort . "Weight"}}
-            <a class="" role="" style=" margin-right: 30px"
+       
+            <a class="ge-link" role="" style=" margin-right: 30px"
                  href="{{.URL}}" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
                  <span>{{safeHTML .Name}}</span> 
                 </a> 
-            
+         
         {{- end}} 
   </div> 
   {{- end}}
-
-
 
   {{- if not .Site.Params.disableSearch}}
   <div class="searchdiv";>
@@ -47,6 +45,77 @@
 
 <!--end header-->
 
+<!--
+<header class="mdc-top-app-bar mdc-top-app-bar--fixed" data-mdc-auto-init="MDCTabBar">
+    <div class="mdc-top-app-bar__row">
+      <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      
+        <div class="mdc-tab-bar" role="tablist">
+          <div class="mdc-tab-scroller">
+            <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+
+                  <a class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" href="/about">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">About</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+                  
+                  <a class="mdc-tab" role="tab" aria-selected="true" href="/components">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Components</span>
+                    </span>
+                    <span class="mdc-tab-indicator">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+
+                  <a class="mdc-tab" role="tab" aria-selected="true" href="/design">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Design</span>
+                    </span>
+                    <span class="mdc-tab-indicator">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+
+                  <a class="mdc-tab" role="tab" aria-selected="true" href="/develop">
+                      <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">Develop</span>
+                      </span>
+                      <span class="mdc-tab-indicator">
+                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                      </span>
+                      <span class="mdc-tab__ripple"></span>
+                    </a>
+
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>-->
+
+  <script>
+      mdc.autoInit();
+
+      function openTab(evt, cityName) {
+               
+                var link= String(document.getElementById(cityName));
+                location.href= link;
+                //evt.currentTarget.className += " active";
+            }
+
+    
+  </script>
+
 
 {{ if ne .Page.Params.Type "home"}}
 <article>
@@ -65,12 +134,11 @@
     </ul>
     
     {{- partial "language-selector.html" . }}
-    <section>
+    <section >
         {{- partial "menu-footer.html" . }}
     </section>
   </aside>
   
- 
 
 
 
@@ -90,8 +158,6 @@
 
     {{if eq .Page.Params.Type "home"}}
 
-
-      
 
 
     <div class="nav-select">

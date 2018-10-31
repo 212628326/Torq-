@@ -55,10 +55,11 @@ article>aside {
                 }
 
                 >div {
-                    background-color: #eee;
+                    //background-color: #eee;
+                    background-color: #CCE9F9;
                     * {
                         font-weight: bold;
-                        border-bottom: dotted 1px red;
+                        //border-bottom: dotted 1px red;
                     }
                 }
             }
@@ -99,7 +100,8 @@ article>aside {
                     &:hover,
                     &:focus,
                     &:active {
-                        background-color: #eee;
+                        //background-color: #eee;
+                        background-color: #EDF7FC;
                         border-radius: .2rem;
                         padding: 0 0rem;
                     }

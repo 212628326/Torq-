@@ -5,9 +5,9 @@ article {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    margin-top: 3.5rem
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
 }
-
 
 section.homepage{
 
@@ -410,4 +410,5 @@ h6:hover .anchor {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    font-size: 5rem;
 }

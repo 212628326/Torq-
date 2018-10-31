@@ -11,7 +11,8 @@ darkDemo = "<button class='torq-button-dark' style ='margin-right:20px;'>Primary
 +++
 
 
-### Setup
+
+#### Setup
 
 ##### Installation
 Install the component into your project via npm
@@ -26,7 +27,7 @@ Import the component into your sass file
 
 \
 \
-### HTML Structure 
+#### HTML Structure 
 ##### Primary Button
 
     <button class='torq-button'>
@@ -58,7 +59,7 @@ Import the component into your sass file
 
 
 
-### CSS Classes
+#### CSS Classes
 
 | Class Name |  Description |
 |:--|:--|
@@ -70,7 +71,7 @@ Import the component into your sass file
 \
 \
 
-### Sass Mixins
+#### Sass Mixins
 
 | Class Name |  Description |
 |:--|:--|
@@ -82,7 +83,7 @@ Import the component into your sass file
 \
 \
 
-### Javascript Classes
+#### Javascript Classes
 
 | Class Name |  Description |
 |:--|:--|
@@ -94,7 +95,7 @@ Import the component into your sass file
 \
 \
 
-### Javascript Attributes
+#### Javascript Attributes
 
 | Class Name |  Description |
 |:--|:--|
@@ -106,7 +107,7 @@ Import the component into your sass file
 \
 \
 
-### Javascript Functions
+#### Javascript Functions
 
 | Class Name |  Description |
 |:--|:--|
@@ -118,7 +119,7 @@ Import the component into your sass file
 \
 \
 
-### Events
+#### Events
 | Class Name |  Description |
 |:--|:--|
 | href | The location href to link to |

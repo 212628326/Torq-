@@ -8,7 +8,7 @@ lightThumbnail = "" #image path for dark thumbnail
 darkThumbnail = "" #image path for dark thumbnail 
 lightDemo = "" #Enter HTML for Light version
 darkDemo = "" #Enter HTML for Dark version
-
+pagetype = "components"
 +++
 
 

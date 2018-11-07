@@ -63,18 +63,20 @@
 
 
   .titlebar{
-    width: 80%;
+    //width: 80%;
     display:flex;
     justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    
     
    
   }
 
   .description{
     font-size: 16px;
-    width: 70%;
+    width: 80%;
+  
   }
 
   .darkswitch{
@@ -147,8 +149,8 @@ nav {
 }
 
 
-.ge-link {
-  font-size: 0.79rem;
+.gelink {
+  //font-size: 0.79rem;
   line-height: 1.025rem;
   letter-spacing: 1.5px;
   padding-right: 0.5rem;
@@ -162,12 +164,16 @@ nav {
   text-overflow: ellipsis;
   white-space: nowrap;
   box-sizing: border-box;
-  border-bottom: solid 0.125rem transparent;
+  //border-bottom: solid 0.125rem transparent;
 
-  a :hover{
-    border-bottom: 0.125rem solid #005EB8;
-    color: #005EB8;
-    height: 4rem;
 
   }
-}
+
+  .gelink:hover{
+    //border-bottom: 0.125rem solid #005EB8;
+    color: #005EB8;
+    height: 4rem;
+  }
+
+ 
+

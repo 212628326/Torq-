@@ -9,25 +9,29 @@
 
 <body>
     <div class="left">
+        <div style="display: flex; align-content: center; justify-content: space-between; width: 80%;">
+            <h1 >{{.Title}}</h1>
+            <div class="darkswitch">
 
-        <h1>{{.Title}}</h1>
+                  <!--  <label>Dark Theme</label>-->
+                    <div class="mdc-switch" data-mdc-auto-init="MDCSwitch">
+                        <div class="mdc-switch__track"></div>
+                        <div class="mdc-switch__thumb-underlay">
+                            <div class="mdc-switch__thumb">
+                                <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" role="switch" onclick="myFunction()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        
         <div class="titlebar">
             <div class="description">
                 {{.Page.Description}}
             </div>
             <!-- Rounded switch -->
-            <div class="darkswitch">
-
-                <label>Dark Theme</label>
-                <div class="mdc-switch" data-mdc-auto-init="MDCSwitch">
-                    <div class="mdc-switch__track"></div>
-                    <div class="mdc-switch__thumb-underlay">
-                        <div class="mdc-switch__thumb">
-                            <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" role="switch" onclick="myFunction()">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
 

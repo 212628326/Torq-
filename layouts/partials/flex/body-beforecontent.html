@@ -6,11 +6,11 @@
   
 
   {{- with .Site.Menus.mainmenu}}
-  <div class="shortcuts">
+  <div class="shortcuts" id="tabs">
 
         {{- range sort . "Weight"}}
        
-            <a class="ge-link" role="" style=" margin-right: 30px"
+            <a class="gelink" role=""  onClick="setActive(event)"
                  href="{{.URL}}" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
                  <span>{{safeHTML .Name}}</span> 
                 </a> 
@@ -42,6 +42,7 @@
 <a href="https://guides.github.com/features/mastering-markdown/" target="_blank"><i class='fa fa-gitlab'></i></a>
 
 </header>
+
 
 <!--end header-->
 
@@ -134,9 +135,9 @@
     </ul>
     
     {{- partial "language-selector.html" . }}
-    <section >
+   <!-- <section >
         {{- partial "menu-footer.html" . }}
-    </section>
+    </section>-->
   </aside>
   
 

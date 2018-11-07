@@ -8,6 +8,7 @@ lightThumbnail = "/images/lightThumbnails/Slider.png"    #image path for light t
 darkThumbnail = "/images/darkThumbnails/Slider.png"     #image path for dark thumbnail 
 lightDemo = "" #Enter HTML for Light version
 darkDemo = "" #Enter HTML for Dark version
+pagetype = "components"
 
 +++
 

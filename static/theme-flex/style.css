@@ -779,15 +779,14 @@ ul.children.children-card {
   border: 1px solid #2196F3; }
 
 .titlebar {
-  width: 80%;
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-top: 20px;
+  padding-bottom: 50px; }
 
 .description {
   font-size: 16px;
-  width: 70%; }
+  width: 80%; }
 
 .darkswitch {
   align-items: center;
@@ -834,8 +833,7 @@ nav {
   right: 5%;
   top: 100px; }
 
-.ge-link {
-  font-size: 0.79rem;
+.gelink {
   line-height: 1.025rem;
   letter-spacing: 1.5px;
   padding-right: 0.5rem;
@@ -848,12 +846,11 @@ nav {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  box-sizing: border-box;
-  border-bottom: solid 0.125rem transparent; }
-  .ge-link a :hover {
-    border-bottom: 0.125rem solid #005EB8;
-    color: #005EB8;
-    height: 4rem; }
+  box-sizing: border-box; }
+
+.gelink:hover {
+  color: #005EB8;
+  height: 4rem; }
 
 @media (max-width: 1024px) {
   section {
@@ -2580,3 +2577,6 @@ nav {
 header .mdc-tab-bar {
   height: 100%;
   width: 100%; }
+
+.mdc-tab {
+  flex: 0 1 20%; }

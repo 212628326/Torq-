@@ -4,7 +4,7 @@ description = ""
 weight = 2
 menu = "mainmenu"
 hidden = false
-
+pagetype = "components"
 +++
 
 

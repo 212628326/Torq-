@@ -5,5 +5,4 @@ description = ""
 
 +++
 
-Lorem Ipsum.
-Notice `draft` is set to true.
+# Torq Release Notes

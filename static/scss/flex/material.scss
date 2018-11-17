@@ -1,12 +1,11 @@
 //Google Material Imports
 @import "@material/button/mdc-button";
 @import "@material/card/mdc-card";
-@import "@material/tab/mdc-tab";
-@import "@material/tab-bar/mdc-tab-bar";
-@import "@material/tab-indicator/mdc-tab-indicator";
-@import "@material/tab-scroller/mdc-tab-scroller";
 @import "@material/switch/mdc-switch";
 @import "@material/layout-grid/mdc-layout-grid";
+@import "@material/image-list/mdc-image-list";
+
+
 
 .torq-button, .torq-button--primary {
   @extend .mdc-button;
@@ -81,28 +80,11 @@
   //display: flex;
   //justify-content: center;
   //padding: 20px;
-  @include mdc-card-fill-color(#fefefe);
+  @include mdc-card-fill-color(#ffffff);
   //@include mdc-card-outline(#575B63, 1px);
 
 }
 
-.mdc-tab-bar {
-  height: 100%;
-  @include mdc-tab-bar-width(50%);
-}
-
-header {
-
-  .mdc-tab-bar {
-    height: 100%;
-    @include mdc-tab-bar-width(100%);
-
-  }
-}
-
-.mdc-tab{
-@include mdc-tab-fixed-width(20%);
-}
 
 
-//-----------------------------------------------------------------------------------
+

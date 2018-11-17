@@ -1,0 +1,97 @@
+//Google Material Imports
+@import "@material/button/mdc-button";
+@import "@material/card/mdc-card";
+@import "@material/tab/mdc-tab";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/switch/mdc-switch";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/image-list/mdc-image-list";
+
+
+
+//--------HOME PAGE SCSS---------------------------------------------------
+
+//--------TOP NAVIGATION-------------------
+.quicklinks {
+    width: 100%;
+    height: 500px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; //margin: 20px;
+}
+
+.gelink {
+    //font-size: 0.79rem;
+    line-height: 1.025rem;
+    letter-spacing: 1.5px;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    height: 4rem;
+    line-height: 4rem;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box; //border-bottom: solid 0.125rem transparent;
+}
+
+.gelink:hover {
+    //border-bottom: 0.125rem solid #005EB8;
+    color: #005EB8;
+    height: 4rem;
+}
+
+
+
+
+
+
+
+
+//Hero Image 
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/train.jpg");
+
+    /* Set a specific height */
+    height: 70%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+}
+
+
+
+.mdc-card--outlined{
+    height: 220px;
+    width: 95%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    display: flex;
+    //display: flex;
+    //justify-content: center;
+    //padding: 20px;
+    @include mdc-card-fill-color(#ffffff);
+    //@include mdc-card-outline(#575B63, 1px);
+  
+  }

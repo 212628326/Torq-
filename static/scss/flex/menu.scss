@@ -13,7 +13,7 @@ article>aside {
     padding: 2rem 0rem 1rem 0rem;
     position: fixed;
     top: 3.5rem;
-    width: 20rem;
+    width: 15rem;
     overflow-y: auto;
 
     .menu {
@@ -56,7 +56,8 @@ article>aside {
 
                 >div {
                     //background-color: #eee;
-                    background-color: #CCE9F9;
+                    //background-color: #CCE9F9;
+                    
                     * {
                         font-weight: bold;
                         //border-bottom: dotted 1px red;
@@ -101,9 +102,10 @@ article>aside {
                     &:focus,
                     &:active {
                         //background-color: #eee;
-                        background-color: #EDF7FC;
+                        //background-color: #EDF7FC;
                         border-radius: .2rem;
                         padding: 0 0rem;
+                        font-weight: bold;
                     }
                 }
 
@@ -117,7 +119,7 @@ article>aside {
             }
 
             li {
-                border-left: 1px solid #eee;
+                //border-left: 1px solid #eee;
             }
         }
     }

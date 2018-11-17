@@ -1,0 +1,158 @@
+//Google Material Imports
+@import "@material/button/mdc-button";
+@import "@material/card/mdc-card";
+@import "@material/tab/mdc-tab";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/switch/mdc-switch";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/image-list/mdc-image-list";
+
+
+
+//----SCSS for COMPONENT PAGE LAYOUT-----------------------------------------------------
+
+
+// COMPONENT GALLERY --------------------------------------------------
+
+
+.mdc-card-outlined {
+    height: 250px; //@include mdc-card-outline(#000000, 1px);
+    @include mdc-card-shape-radius(0, false);
+    @include mdc-card-fill-color(#ffffff);
+    overflow: hidden;
+    .card-label {
+        height: 25%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        background: none;
+    }
+    #description {
+        display: none;
+    }
+}
+
+.mdc-card-outlined:hover {
+    @include mdc-card-fill-color(#848484);
+    img {
+        display: none;
+    }
+    #description {
+        display: flex;
+        padding: 4%;
+        color: #ffffff;
+    }
+    .card-label {
+        display: none;
+    }
+}
+
+//---COMPONENT PAGE ---------------------------------------------
+
+
+//Tabs 
+.mdc-tab-bar {
+    height: 100%;
+    @include mdc-tab-bar-width(50%);
+}
+
+.mdc-tab {
+    @include mdc-tab-fixed-width(20%);
+}
+
+//Content underneath each tab 
+.tabcontent {
+    display: none;
+    padding: 6px 12px; //border: 1px solid #ccc;
+    border-top: none;
+    width: 90%;
+}
+
+//Demo Box 
+.demo {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 4%;
+    height: 250px;
+    width: 100%; //background-color: #f1eeee;
+    border: 1px solid #2196F3;
+}
+
+.titlebar {
+    //width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.description {
+    font-size: 16px;
+    width: 80%;
+}
+
+.darkswitch {
+    align-items: center;
+    display: flex;
+    label {
+        margin-right: 10px;
+    }
+}
+
+// Left side of the page that contains the documentation
+.left {
+    width: 75%;
+    overflow-x: hidden;
+}
+
+// Right side of the page that has the table of contents 
+.right {
+    //display: flex;
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 100px;
+    padding-left: 20px;
+    right: 0;
+    border-left: 1px solid #eeeeee;
+}
+
+// I may not need this.....
+#toc {
+    ul {
+        padding-left: 0;
+    }
+    li {
+        list-style-type: none;
+        padding-left: 0px;
+    }
+    li :hover {
+        color: #2196F3;
+    }
+}
+
+//Responsive Code for COMPONENTS----------------------------------------------------------------
+@media(max-width:768px) {
+    .right {
+        display: none;
+    }
+    .left {
+        width: 95%;
+        overflow-x: hidden; //margin-top: 15rem;
+    }
+    .tabcontent {
+        width: 90%;
+    }
+    .description {
+        width: 90%;
+    }
+}

@@ -107,8 +107,9 @@
                 <div id="dark" style="display: none;"> {{ .Params.darkDemo | safeHTML }} </div>
                 <br>
             </div>
-
+          
             {{ .Content }} 
+            {{ partial "flex/tablecontents.html" . }}
             {{ end }} 
             {{ end }}
 

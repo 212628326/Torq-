@@ -1,4 +1,6 @@
 
+
+
 <header>
   <div class="logo" >
     {{ partial "header.html" . }}
@@ -8,14 +10,37 @@
   {{- with .Site.Menus.mainmenu}}
   <div class="shortcuts" id="tabs">
 
-        {{- range sort . "Weight"}}
+  <!--      {{- range sort . "Weight"}}
        
             <a class="gelink" role=""  onClick="setActive(event)"
                  href="{{.URL}}" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
                  <span>{{safeHTML .Name}}</span> 
                 </a> 
          
-        {{- end}} 
+        {{- end}} -->
+
+
+
+       <a class="gelink" role=""  onClick="setActive(event)"
+        href="/about/about_torq" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
+        <span>ABOUT</span> 
+       </a>
+
+      <a class="gelink" role=""  onClick="setActive(event)"
+        href="/components" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
+        <span>COMPONENTS</span> 
+       </a> 
+
+      <a class="gelink" role=""  onClick="setActive(event)"
+        href="/design/getting_started" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
+        <span>DESIGN</span> 
+       </a> 
+
+       <a class="gelink" role=""  onClick="setActive(event)"
+       href="/develop/getting_started" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
+       <span>DEVELOP</span> 
+      </a> 
+
   </div> 
   {{- end}}
 

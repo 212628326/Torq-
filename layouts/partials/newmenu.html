@@ -7,6 +7,7 @@
   {{- range .Site.Home.Sections.ByTitle}} <!--sort through the sections of the Home page by the title-->
   {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
   {{- end}}
+  
 
 <!--if you specifiy sort by weight, all the pages are added to a hash based on the weight value-->  
 {{- else}}
@@ -14,7 +15,6 @@
   {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
   {{- end}}
 {{- end}}
-
 
 
 <!-- templates -->
@@ -26,8 +26,8 @@
     {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}<!--set variable equal to the total amount of pages-->
     {{- safeHTML .Params.head}}<!---->
 
-    {{$pagetype := $currentNode.Params.pagetype}}
-    {{ if eq .Params.pagetype $pagetype}}
+
+   
     <li data-nav-id="{{.URL}}" class="dd-item
         {{- if .IsAncestor $currentNode}} parent{{end}}
         {{- if eq .URL $currentNode.URL}} active{{end}}
@@ -35,7 +35,9 @@
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
         ">
 
-    
+  {{$pagetype := $currentNode.Params.pageType}}
+  {{ if and (eq .Params.pageType $pagetype) (ne .Params.menu "mainmenu")}}
+ 
     <div><!--this line shows the corresponding parent names and the cheverons-->
       <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
         
@@ -65,7 +67,7 @@
 
 
           <!--if sorted by title-->
-        {{- if eq .Site.Params.ordersectionsby "title"}}
+        {{- if eq .Params.pageType "components"}}
           {{- range $pages.ByTitle }}
             {{- if and .Params.hidden (not $.showhidden) }}
             {{- else}}

@@ -5,5 +5,4 @@ description = ""
 pagetype = "develop"
 +++
 
-Lorem Ipsum.
-Notice `draft` is set to true.
+# Installing Torq Components

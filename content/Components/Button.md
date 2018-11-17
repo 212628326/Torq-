@@ -3,12 +3,12 @@ title= "Button"
 author = "Daniel Thompson"
 date= 2018-10-02T16:37:05-05:00
 description = " Buttons express what action will occur when the user clicks or touches it. Buttons are used to initialize an action, either in the background or foreground of an experience."
-categories= ["component"]
+pageType="components"
+componentType="torq"
 lightThumbnail = "/images/lightThumbnails/Button.png"  #image path for light thumbnail
 darkThumbnail = "/images/darkThumbnails/Button.png"     #image path for dark thumbnail 
 lightDemo = "<button class='torq-button' style ='margin-right:20px;'>Primary Button</button> <button class='torq-button--secondary' style ='margin-right:20px;'>Secondary Button</button>" #Enter HTML for Light version
 darkDemo = "<button class='torq-button-dark' style ='margin-right:20px;'>Primary Button</button> <button class='torq-button-dark--secondary' style ='margin-right:20px;'>Secondary Button</button>" #Enter HTML for Dark version
-pagetype = "components"
 +++
 
 

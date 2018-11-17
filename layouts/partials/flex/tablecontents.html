@@ -1,6 +1,10 @@
 <div class="right">
         <div id="toc">
-         {{.TableOfContents}}
+        {{if eq .Params.pagetype "components"}}
+         <span><h6>Version:</h6> {{.Params.version}}</span>
+         {{end}}
+         
+         <span><h6>Last Updated:</h6> {{.Lastmod.Format "March 2, 2000"}}</span>
+         <span> <h6>In this Article:</h6>{{.TableOfContents}}</span>
         </div>
-
-    </div>
+</div>

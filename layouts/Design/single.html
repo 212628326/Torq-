@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div class="left">
+        <div style="display: flex; align-content: center; justify-content: space-between; width: 90%;">
+            <h1 >{{.Title}}</h1>
+
+        </div>
+        
+
+        <div>
+            <div class="description" >
+                {{.Content}}
+                {{ partial "flex/tablecontents.html" . }}
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+{{ end }}

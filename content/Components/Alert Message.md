@@ -1,18 +1,19 @@
 +++
-title= "Button"
-date= 2018-10-30T13:22:29-05:00
+title= "Alert Message"
+date= 2018-11-15T11:25:46-06:00
 description = ""
 author = ""
-version ="2"
-type = "web" 
-lightThumbnail = "" #image path for dark thumbnail
-darkThumbnail = "" #image path for dark thumbnail 
+version = ""
+pageType ="components"
+componentType = "torq" #Enter the type of component. Standard or Web
+lightThumbnail = "/images/lightThumbnails/Alert Message.png"    #image path for light thumbnail
+darkThumbnail = "/images/darkThumbnails/Alert Message.png"     #image path for dark thumbnail 
 lightDemo = "" #Enter HTML for Light version
 darkDemo = "" #Enter HTML for Dark version
-pagetype="components"
-
 
 +++
+
+
 
 ### Setup
 
@@ -27,19 +28,29 @@ Import the component into your sass file
 
     insert code here
 
-
 \
 \
-\
-
-### Single HTML Tag
+### HTML Structure 
+##### Variant 1
 
     insert code here
+
+
+##### Variant 2
+
+    insert code here
+
+
+##### Variant 3
+
+    insert code here
+
 \
 \
 \
 
-### CSS Variables
+### CSS Classes
+
 | Class Name |  Description |
 |:--|:--|
 | href | The location href to link to |
@@ -50,7 +61,7 @@ Import the component into your sass file
 \
 \
 
-### Attributes
+### Sass Mixins
 
 | Class Name |  Description |
 |:--|:--|
@@ -62,12 +73,38 @@ Import the component into your sass file
 \
 \
 
-### Functions
+### Javascript Classes
+
 | Class Name |  Description |
 |:--|:--|
 | href | The location href to link to |
 | align |  horizontal align button on page |
 | theme | `default`, `primary` , `success`,`info`,`warning`,`danger` |
+
+\
+\
+\
+
+### Javascript Attributes
+
+| Class Name |  Description |
+|:--|:--|
+| href | The location href to link to |
+| align |  horizontal align button on page |
+| theme | `default`, `primary` , `success`,`info`,`warning`,`danger` |
+
+\
+\
+\
+
+### Javascript Functions
+
+| Class Name |  Description |
+|:--|:--|
+| href | The location href to link to |
+| align |  horizontal align button on page |
+| theme | `default`, `primary` , `success`,`info`,`warning`,`danger` |
+
 \
 \
 \
@@ -78,6 +115,3 @@ Import the component into your sass file
 | href | The location href to link to |
 | align |  horizontal align button on page |
 | theme | `default`, `primary` , `success`,`info`,`warning`,`danger` |
-
-
-

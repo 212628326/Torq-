@@ -1,14 +1,12 @@
 +++
-title= "DESIGN"
+title= "Getting Started"
+date= 2018-11-14T11:26:27-06:00
 description = ""
-weight = 3
-menu = "mainmenu"
 pagetype = "design"
+weight = 1
 
 +++
 
-
-# Start Designing with Torq
 
 ##### Download Sketch Files here
 

@@ -1,14 +1,15 @@
 +++
-title= "Slider"
-date= 2018-10-18T13:07:28-05:00
+title= "Chip"
+date= 2018-11-15T11:26:26-06:00
 description = ""
 author = ""
-type = "" #Enter the type of component. Standard or Web
-lightThumbnail = "/images/lightThumbnails/Slider.png"    #image path for light thumbnail
-darkThumbnail = "/images/darkThumbnails/Slider.png"     #image path for dark thumbnail 
+version = ""
+pageType ="components"
+componentType = "torq" #Enter the type of component. Standard or Web
+lightThumbnail = "/images/lightThumbnails/Chip.png"    #image path for light thumbnail
+darkThumbnail = "/images/darkThumbnails/Chip.png"     #image path for dark thumbnail 
 lightDemo = "" #Enter HTML for Light version
 darkDemo = "" #Enter HTML for Dark version
-pagetype = "components"
 
 +++
 

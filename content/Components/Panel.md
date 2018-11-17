@@ -1,14 +1,16 @@
 +++
-title= "Tab"
-date= 2018-10-17T16:36:44-05:00
-description = "A classic design for organizing content on multiple tabs."
+title= "Panel"
+date= 2018-11-15T11:32:37-06:00
+description = ""
 author = ""
-type = "" #Enter the type of component. Standard or Web
-lightThumbnail = "/images/lightThumbnails/Tab.png"    #image path for light thumbnail
-darkThumbnail = "/images/darkThumbnails/Tab.png"     #image path for dark thumbnail 
+version = ""
+pageType ="components"
+componentType = "torq" #Enter the type of component. Standard or Web
+lightThumbnail = "/images/lightThumbnails/Panel.png"    #image path for light thumbnail
+darkThumbnail = "/images/darkThumbnails/Panel.png"     #image path for dark thumbnail 
 lightDemo = "" #Enter HTML for Light version
 darkDemo = "" #Enter HTML for Dark version
-pagetype = "components"
+
 +++
 
 

@@ -17,7 +17,7 @@ darkDemo = "" #Enter HTML for Dark version
 
 
 
-### Setup
+#### Setup
 
 ##### Installation
 Install the component into your project via npm
@@ -35,14 +35,14 @@ Import the component into your sass file
 \
 \
 
-### Single HTML Tag
+#### Single HTML Tag
 
     insert code here
 \
 \
 \
 
-### CSS Variables
+#### CSS Variables
 | Class Name |  Description |
 |:--|:--|
 | href | The location href to link to |
@@ -53,7 +53,7 @@ Import the component into your sass file
 \
 \
 
-### Attributes
+#### Attributes
 
 | Class Name |  Description |
 |:--|:--|
@@ -65,7 +65,7 @@ Import the component into your sass file
 \
 \
 
-### Functions
+#### Functions
 | Class Name |  Description |
 |:--|:--|
 | href | The location href to link to |
@@ -75,7 +75,7 @@ Import the component into your sass file
 \
 \
 
-### Events
+#### Events
 | Class Name |  Description |
 |:--|:--|
 | href | The location href to link to |

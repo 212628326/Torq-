@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700,800');
+
+$torq-font-family: "Heebo", sans-serif !default;
+$mdc-typography-font-family: $torq-font-family;
+
+html {
+  font-family: $torq-font-family;
+}
+
+.weight--light {
+  font-weight: 300!important;
+}
+
+.weight--regular {
+  font-weight: 400!important;
+}
+
+.weight--medium {
+  font-weight: 500!important;
+}
+
+.weight--bold {
+  font-weight: 700!important;
+}
+
+.weight--extra-bold {
+  font-weight: 800!important;
+}
+
+//================================================================================
+// Standard Torq Typography Rules
+//================================================================================
+h1, .torq-h1 {
+  font-size: 50px;
+  font-weight: 400!important; //regular
+  line-height: 40px;
+}
+
+h2, .torq-h2 {
+  font-size: 38px;
+  font-weight: 400!important; //regular
+  //line-height: 25px;
+}
+
+//Page Headers
+h3, .torq-page__header {
+  font-size: 24px;
+  font-weight: 400!important; //regular
+  line-height: 35px;
+  letter-spacing: 0;
+}
+
+//Section Headers
+h4, .torq-section__header {
+  font-size: 20px;
+  font-weight: 700!important; //bold
+  line-height: 29px;
+  color: #202028;
+}
+
+//Title 1
+h5, .torq-title1 {
+  font-size: 18px;
+  font-weight: 700!important; //bold
+  line-height: 27px;
+  color: #202028;
+}
+
+//Title 2
+h6, .torq-title2 {
+  font-size: 15px;
+  font-weight: 700!important; //bold
+  line-height: 26px;
+  color: #202028;
+}
+
+//Body Copy & Buttons
+body, button, td, p, .torq-body1 {
+  font-size: 15px;
+  font-weight: 400!important; //medium
+  line-height: 26px;
+  color: #2C404C;
+}
+
+//Sub-Body Copy
+.torq-body2 {
+  font-size: 15px;
+  font-weight: 300!important; //light
+  line-height: 26px;
+  color: #596578;
+}
+
+//Chart Titles
+th, .torq-chart__title {
+  font-size: 13px;
+  font-weight: 500!important; //medium
+  line-height: 40px;
+  letter-spacing: 0.13px;
+  text-transform: uppercase;
+  color: #596578;
+}
+
+:host {
+  font-family: $torq-font-family;
+}

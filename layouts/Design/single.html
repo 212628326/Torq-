@@ -9,15 +9,29 @@
 
 <body>
     <div class="left">
-        <div style="display: flex; align-content: center; justify-content: space-between; width: 90%;">
-            <h1 >{{.Title}}</h1>
+        <div style="display: flex; align-content: center; justify-content: space-between; ">
+            <h3 >{{.Title}}</h3>
 
         </div>
         
 
         <div>
             <div class="description" >
-                {{.Content}}
+                
+                {{ if eq .Title "Colors"}}
+                    {{ partial "flex/color-swatches.html" .}}
+                {{end}}
+
+                {{ if eq .Title "Typography" }}
+                <div class="content-card"> 
+                    {{ partial "flex/typography-scale.html" . }}
+                </div>
+                {{end}} 
+
+               <div class="content-card"> 
+                    {{.Content}}
+               </div> 
+
                 {{ partial "flex/tablecontents.html" . }}
             </div>
         </div>

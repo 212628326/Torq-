@@ -8,6 +8,7 @@
 @import "@material/switch/mdc-switch";
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/image-list/mdc-image-list";
+@import "@material/elevation/mdc-elevation";
 
 
 
@@ -18,57 +19,53 @@
 
 
 .mdc-card-outlined {
-    height: 250px; //@include mdc-card-outline(#000000, 1px);
+    min-height: 250px;
+    max-height: 250px;
+    min-width: 200px;
     @include mdc-card-shape-radius(0, false);
     @include mdc-card-fill-color(#ffffff);
+    @include mdc-card-outline(#C7D4DD, 1px);
     overflow: hidden;
-    .card-label {
-        height: 25%;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-content: center;
-        background: none;
-    }
-    #description {
-        display: none;
-    }
+    padding: 0 20px 0 20px;
+
 }
 
-.mdc-card-outlined:hover {
-    @include mdc-card-fill-color(#848484);
-    img {
-        display: none;
-    }
-    #description {
-        display: flex;
-        padding: 4%;
-        color: #ffffff;
-    }
-    .card-label {
-        display: none;
-    }
+.thumbnail{
+    display: inline-block;  
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.content-card{
+    padding: 15px 15px 15px 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #C7D4DD;
+    overflow: hidden;
+    height: auto;
+    width: auto;
+    margin-bottom: 30px;
+}
+
 
 //---COMPONENT PAGE ---------------------------------------------
 
 
 //Tabs 
-.mdc-tab-bar {
+.mdc-tab-bar.component{
     height: 100%;
     @include mdc-tab-bar-width(50%);
 }
 
-.mdc-tab {
+.mdc-tab.component{
     @include mdc-tab-fixed-width(20%);
 }
 
 //Content underneath each tab 
 .tabcontent {
     display: none;
-    padding: 6px 12px; //border: 1px solid #ccc;
-    border-top: none;
-    width: 90%;
+    padding: 20px 12px; 
+    border-top: 1px solid #C7D4DD;
+    width: 80%;
 }
 
 //Demo Box 
@@ -79,9 +76,13 @@
     justify-content: center;
     margin-bottom: 50px;
     margin-top: 4%;
-    height: 250px;
-    width: 100%; //background-color: #f1eeee;
-    border: 1px solid #2196F3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 250px;
+    max-height: auto;
+    width: 80%; //background-color: #f1eeee;
+    border: 1px solid #C7D4DD;
+    background-color: #ffffff;
 }
 
 .titlebar {
@@ -89,7 +90,7 @@
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 .description {
@@ -107,7 +108,7 @@
 
 // Left side of the page that contains the documentation
 .left {
-    width: 75%;
+    width: 85%;
     overflow-x: hidden;
 }
 
@@ -115,7 +116,7 @@
 .right {
     //display: flex;
     height: 100%;
-    width: 20%;
+    width: 15%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -123,7 +124,7 @@
     padding-top: 100px;
     padding-left: 20px;
     right: 0;
-    border-left: 1px solid #eeeeee;
+    border-left: 1px solid #C7D4DD;
 }
 
 // I may not need this.....
@@ -140,19 +141,56 @@
     }
 }
 
+
+
+.color-values {
+    margin-right:20px;
+    margin-top:20px;
+}
+
+.swatch {
+    height: 40px;
+    width: 242px;
+    border-radius: 30px;
+   // @include mdc-elevation(11, #000000, .05);
+    box-shadow: 6px 11px 12px rgba(43, 48, 55, .27);
+}
+
+.swatch-status{
+    height: 40px;
+    width: 175px;
+    border-radius: 30px;
+   // @include mdc-elevation(11, #000000, .05);
+    box-shadow: 6px 11px 12px rgba(43, 48, 55, .27);
+}
+
+
+
+
 //Responsive Code for COMPONENTS----------------------------------------------------------------
-@media(max-width:768px) {
+@media(max-width:900px) {
     .right {
         display: none;
+        width: 0;
     }
     .left {
         width: 95%;
+        padding: 1rem;
         overflow-x: hidden; //margin-top: 15rem;
     }
     .tabcontent {
-        width: 90%;
+        width: 95%;
     }
     .description {
-        width: 90%;
+        width: 95%;
     }
+    .demo{
+        width: 95%;
+    }
+
+    .mdc-tab-bar.component{
+        height: 100%;
+        @include mdc-tab-bar-width(100%);
+    }
+
 }

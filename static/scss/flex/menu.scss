@@ -1,5 +1,5 @@
 article>aside {
-    background-color: #f9f9f9;
+    background-color: #F7F7FB;
     bottom: 0;
     box-sizing: border-box;
     display: -webkit-box;
@@ -15,6 +15,7 @@ article>aside {
     top: 3.5rem;
     width: 15rem;
     overflow-y: auto;
+    border-right: 1px solid #C7D4DD;
 
     .menu {
         line-height: 2rem;
@@ -37,7 +38,7 @@ article>aside {
         .dd-item {
             padding-left: 1rem;
             list-style: none;
-            font-size: 13px;
+            font-size: 15px;
 
             &.alwaysopen>ul {
                 display: block

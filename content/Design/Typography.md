@@ -7,68 +7,24 @@ pagetype = "design"
 
 +++
 
-
 \
+#### Best Practices
 
-### Header Sizes
-\
-\
+##### Always Use Heebo
 
-<table >
-  <tr>
-    <th style="width: 35%;">Firstname</th>
-    <th>Weight</th>
-    <th>Font Size</th> 
-    <th>Rem</th>
-    <th>Line Spacing</th>
-  </tr>
-  <tr>
-    <td> <h1> Header 1</h1></td>
-    <td> Regular </td> 
-    <td>50</td>
-    <td>50</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td><h2>Header 2</h2></td>
-    <td>Regular</td> 
-    <td>94</td>
-    <td>50</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td> <h3> Header 3</h3></td>
-    <td></td> 
-    <td>50</td>
-    <td>50</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td><h4>Header 4</h4></td>
-    <td>Jackson</td> 
-    <td>94</td>
-    <td>50</td>
-     <td>50</td>
-  </tr>
-  <tr>
-    <td> <h5> Header 5</h5></td>
-    <td></td> 
-    <td>50</td>
-    <td>50</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td><h6>Header 6</h6></td>
-    <td>Jackson</td> 
-    <td>94</td>
-    <td>50</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td><p>Paragraph</p></td>
-    <td>Jackson</td> 
-    <td>94</td>
-    <td>50</td>
-    <td>50</td>
-  </tr>
-</table>
+Heebo is a significant part of TORQ. It was hand selected out of hundreds of fonts because of its legibility and industrial look and feel. 
+
+##### Create Heirarchy
+
+TORQ has recommended font sizes to make it easy for designers and developers to create clean and legible 
+products that any user can quickly take in. Utilize the size guidelines below and consider how your layout will be consumed.
+
+##### Be Consistent
+
+Your application should have a consistent use of typography. If you set type rules on one page that are different than 
+our guidelines, the rest of the workflow should follow those same type rules set on the previous page. 
+
+##### Using Bold
+
+Although Heebo comes in Extra Bold and Black, TORQ discourages using them on web and ui applications.
+

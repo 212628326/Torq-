@@ -8,24 +8,4 @@ pagetype = "design"
 +++
 
 
-# Start Designing with Torq
-
-##### Download Sketch Files here
-
-Some download link
-
-\
-\
-\
-
-##### Download Adobe XD Files here
-Some download link
-
-\
-\
-\
-
-
-
-##### Download Fonts here
-Some download link
+#### aldjflkaskdfjlasjdlfjdas

@@ -7,6 +7,24 @@
 
 
 
+//------TORQ COLORS------------------------------------------------
+
+$torq-primary-action: #508BE4;
+$torq-dark-background: linear-gradient(185.86deg, #1A2633 0%, #101820 100%);
+$torq-light-background: linear-gradient(176.98deg, #FFFFFF 0%, #D6DFEC 100%);
+$torq-menu-text-color: #596578;
+
+
+//------BUTTON DEMO-------------------------------------------------
+
+
+.torq-page__background {
+  max-height: 100%;
+  background: $torq-light-background;
+  position: static;
+  background-attachment: fixed;
+}
+
 .torq-button, .torq-button--primary {
   @extend .mdc-button;
   @include mdc-button-container-fill-color(#02B989);
@@ -27,12 +45,13 @@
 
 .torq-button--outlined, .torq-button--primary-outlined {
   @extend .mdc-button--outlined;
-  @include mdc-button-ink-color(var(--torq-primary-button-color, #02B989));
-  @include mdc-button-outline-color(var(--torq-primary-button-color, #02B989));
+  @include mdc-button-ink-color(var(--torq-primary-button-color, #508BE4));
+  @include mdc-button-outline-color(var(--torq-primary-button-color, #508BE4));
   @include mdc-button-container-fill-color(transparent);
   @include mdc-button-shape-radius(0);
   @include mdc-button-outline-width(1px, 10px);
   @include mdc-button-horizontal-padding(15px);
+  height: 40px;
 }
 
 .torq-button--secondary-outlined {
@@ -77,14 +96,42 @@
   justify-content: center;
   padding: 5%;
   display: flex;
-  //display: flex;
-  //justify-content: center;
-  //padding: 20px;
   @include mdc-card-fill-color(#ffffff);
-  //@include mdc-card-outline(#575B63, 1px);
+  @include mdc-card-outline(#C7D4DD, 1px);
 
 }
 
 
+//-----TAB DEMO--------------------------------------------
+.mdc-tab {
+  @include mdc-tab-fixed-width(140px);
+  text-transform: none;
+  font-weight: 500;
+  @include mdc-states($torq-primary-action, false);
+  @include mdc-tab-text-label-color($torq-menu-text-color);
+}
+
+.mdc-tab.dark, .dark .mdc-tab {
+  @include mdc-tab-text-label-color(#ffffff);
+}
+
+
+.mdc-tab__text-label {
+  font-size: 15px;
+}
+
+.mdc-tab__ripple {
+  @include mdc-states($torq-primary-action, false);
+}
+
+.mdc-tab-indicator {
+  @include mdc-tab-indicator-underline-height(5px);
+  @include mdc-tab-indicator-underline-color($torq-primary-action);
+  opacity: 85%;
+}
+
+.mdc-top-app-bar .mdc-tab-bar {
+  margin-left: 68px;
+}
 
 

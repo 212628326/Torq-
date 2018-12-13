@@ -8,29 +8,31 @@ pageType ="components"
 componentType = "torq" #Enter the type of component. Standard or Web
 lightThumbnail = "/images/lightThumbnails/{{replace .TranslationBaseName "-" " " | title}}.png"    #image path for light thumbnail
 darkThumbnail = "/images/darkThumbnails/{{replace .TranslationBaseName "-" " " | title}}.png"     #image path for dark thumbnail 
-lightDemo = "" #Enter HTML for Light version
-darkDemo = "" #Enter HTML for Dark version
+demoLink = "" #Enter link for stackBlitz Demo
+githubLink = ""
 
 +++
 
 
 
-### Setup
+#### Setup
 
 ##### Installation
-Install the component into your project via npm
+Using the command line, install the component into your project using the `npm` command.
     
-    insert code here
+    npm i @torq-design/
 
 
-##### Import
-Import the component into your sass file 
+##### Import Sass Styles
+Import the SCSS styles into your base styling file.
 
-    insert code here
+    @import "@torq-design/";
+
+Make sure your project's SASS compiler is configured to look in the node_modules directory.
 
 \
 \
-### HTML Structure 
+#### HTML Structure 
 ##### Variant 1
 
     insert code here
@@ -49,7 +51,7 @@ Import the component into your sass file
 \
 \
 
-### CSS Classes
+#### CSS Classes
 
 | Class Name |  Description |
 |:--|:--|
@@ -61,7 +63,7 @@ Import the component into your sass file
 \
 \
 
-### Sass Mixins
+#### Sass Mixins
 
 | Class Name |  Description |
 |:--|:--|
@@ -73,7 +75,7 @@ Import the component into your sass file
 \
 \
 
-### Javascript Classes
+#### Javascript Classes
 
 | Class Name |  Description |
 |:--|:--|
@@ -85,7 +87,7 @@ Import the component into your sass file
 \
 \
 
-### Javascript Attributes
+#### Javascript Attributes
 
 | Class Name |  Description |
 |:--|:--|
@@ -97,7 +99,7 @@ Import the component into your sass file
 \
 \
 
-### Javascript Functions
+#### Javascript Functions
 
 | Class Name |  Description |
 |:--|:--|
@@ -109,7 +111,7 @@ Import the component into your sass file
 \
 \
 
-### Events
+#### Events
 | Class Name |  Description |
 |:--|:--|
 | href | The location href to link to |

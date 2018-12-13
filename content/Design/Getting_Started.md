@@ -10,15 +10,11 @@ weight = 1
 
 ##### Download Sketch Files here
 
-Some download link
+The Sketch file includes Torq component symbols, color swatches and sample layouts to help get you started.
 
-\
-\
-\
-
-##### Download Adobe XD Files here
-Some download link
-
+<button class='torq-button--outlined torq-button--primary-outlined '>
+        Download Sketch Files
+</button>
 \
 \
 \
@@ -26,4 +22,9 @@ Some download link
 
 
 ##### Download Fonts here
-Some download link
+
+The Heebo font is used across all Torq applications. Download it for free here.
+
+<button class='torq-button--outlined torq-button--primary-outlined '>
+        Download Heebo Font
+</button>

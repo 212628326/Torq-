@@ -1,33 +1,29 @@
 {{ define "main"}}
 
+<body class="torqtype">
+    <h3> {{.Title}} </h3>
 
+    <div class="mdc-layout-grid" style="width: 80%; margin-left: 0; padding-left: 0;">
+        <div class="mdc-layout-grid__inner">
+            {{ range .Site.Pages.ByTitle }}
+            {{if and (eq .Params.componentType "torq") (ne .Params.menu "mainmenu")}}
 
-<div class="mdc-layout-grid" style="width: 75%;">
-    <div class="mdc-layout-grid__inner">
-        {{ range .Site.Pages.ByTitle }}
-        {{if and (eq .Params.componentType "torq") (ne .Params.menu "mainmenu")}}
+            <div class="mdc-layout-grid__cell ">
 
-        <div class="mdc-layout-grid__cell">
-            <div class="mdc-card-outlined">
-                <a href="{{.URL}}">
-                    <div style="height: 60%;">
-                        <img src='{{.Params.lightThumbnail}}'></img>
-                        <div id="description">
-                            {{.Description}}
-                        </div>
-                    </div>
-                </a>
-                <span class="card-label">
-                  <h5>{{.Title}}</h5>
-                </span>
-
+            <a href="{{.URL}}">
+                <div class="mdc-card-outlined ">
+                    <span class="card-label">
+                        <h5>{{.Title}}</h5>
+                    </span>
+                        <img src='{{.Params.lightThumbnail}}' class="thumbnail"></img>
+                </div>
+            </a>
             </div>
+            {{ end }}
+            {{ end }}
         </div>
-        {{ end }}
-        {{ end }}
     </div>
-</div>
-
+</body>
 
 
 

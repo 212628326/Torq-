@@ -1,14 +1,15 @@
-
 {{ define "main" }}
-<section class="homepage">
-		<div class="hero-image">
-			   <div class="hero-text">
-				 <h1>{{.Title}}</h1>
-				
-			   </div>
-			 </div>
 
-			 <!--
+
+<div class="homepage">
+	<div class="hero-image">
+		<div class="hero-text">
+			<h1 style="margin-bottom: 45px;">{{.Title}}</h1>
+			<h5>{{.Description}}</h5>
+		</div>
+	</div>
+
+	<!--
 			 <div class="hero-image parallax-window" data-parallax="scroll" data-image-src="/images/train.jpg">
 				<div class="hero-text">
 				  <h1>{{.Title}}</h1>
@@ -16,55 +17,86 @@
 				</div>
 			  </div>-->
 
-			 
-<section class="homecontent" >
 
-	{{.Site.Home.Content}}
+	<section class="homecontent">
+
+		{{.Site.Home.Content}}
 
 
 
 		<div class="mdc-layout-grid" data-mdc-auto-init="MDCLayoutGrid">
-				<div class="mdc-layout-grid__inner">
-				  <div class="mdc-layout-grid__cell--span-6">
+			<div class="mdc-layout-grid__inner">
 
-						<div class="mdc-card--outlined">
-								<a href="/components/">
-									<h3>Components</h3>
-								</a>
-							</div>
-				  </div>
-				  <div class="mdc-layout-grid__cell--span-6">
-						<div class="mdc-card--outlined">
-								<a href="/develop/">
-									<h3>Developer Guidelines</h3>
-								</a>
-							</div>
+				<!--TORQ COMPONENTS LINK-->
+				<div class="mdc-layout-grid__cell--span-6">
 
-				  </div>
-				  <div class="mdc-layout-grid__cell--span-6">
+					<div class="homelink">
+						<div class="pill blue"> </div>
 
-						<div class="mdc-card--outlined">
-								<a href="/about/release-notes/">
-									<h3>Release Notes</h3>
-								</a>
-							</div>
-				  </div>
-				  <div class="mdc-layout-grid__cell--span-6">
-
-						<div class="mdc-card--outlined">
-								<a href="/design/">
-									<h3>Design Guidelines</h3>
-								</a>
-							</div>
-				  </div>
+						<div style="width: 60%;">
+							<a href="/components/">
+								<h2>Components</h2>
+							</a>
+							<p class="weight--regular"> Documentation for building and styling Torq UI Components </p>
+						</div>
+					</div>
 				</div>
-			  </div>
-
-			  <script>
-					mdc.autoInit();
-				</script>
 
 
+				<!--TORQ DEVELOP LINK-->
+				<div class="mdc-layout-grid__cell--span-6">
+					<div class="homelink">
+						<div class="pill orange"></div>
+
+						<div style="width: 60%;">
+							<a href="/develop/getting_started">
+								<h2>Developer Guidelines</h2>
+							</a>
+							<p class="weight--regular">Guidelines to help get started developing with Torq components </p>
+						</div>
+					</div>
+
+				</div>
+
+
+				<!--TORQ UPDATES LINK-->
+				<div class="mdc-layout-grid__cell--span-6">
+
+					<div class="homelink">
+						<div class="pill pink"></div>
+
+						<div style="width: 60%;">
+							<a href="/about/torq_updates/">
+								<h2>Torq Updates</h2>
+							</a>
+							<p class="weight--regular">This is a test description of what Torq has to offer in the near future. but how is it </p>
+						</div>
+					</div>
+				</div>
+
+
+				<!--TORQ DESIGN LINK-->
+
+				<div class="mdc-layout-grid__cell--span-6">
+
+					<div class="homelink">
+						<div class="pill purple"></div>
+						<div style="width: 60%;">
+							<a href="/design/getting_started">
+								<h2>Design Guidelines</h2>
+							</a>
+							<p class="weight--regular"> Standards for uisng basic design elements and designing Torq applications </p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				mdc.autoInit();
+			</script>
+
+	</section>
+</div>
 
 
 

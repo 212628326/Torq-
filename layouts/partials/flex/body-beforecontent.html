@@ -1,178 +1,263 @@
 
-
-
+<!--
 <header>
-  <div class="logo" >
-    {{ partial "header.html" . }}
-  </div>
-  
+
 
   {{- with .Site.Menus.mainmenu}}
   <div class="shortcuts" id="tabs">
 
-  <!--      {{- range sort . "Weight"}}
+     {{- range sort . "Weight"}}
        
             <a class="gelink" role=""  onClick="setActive(event)"
                  href="{{.URL}}" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
                  <span>{{safeHTML .Name}}</span> 
                 </a> 
          
-        {{- end}} -->
+        {{- end}} 
 
+      <a class="gelink" role="" onClick="setActive(event)" href="/" id=""
+        {{if eq $.Site.Params.menushortcutsnewtab true}} target="_blank" {{end}} rel="noopener">
+        <span>Home</span>
+      </a>
 
+      <a class="gelink" role="" onClick="setActive(event)" href="/about/about_torq" id="/about"
+        {{if eq $.Site.Params.menushortcutsnewtab true}} target="_blank" {{end}} rel="noopener">
+        <span>About</span>
+      </a>
+   
+      <a class="gelink" role="" onClick="setActive(event)" href="/components" id="/components"
+        {{if eq $.Site.Params.menushortcutsnewtab true}} target="_blank" {{end}} rel="noopener">
+        <span>Components</span>
+      </a>
+    
+    
+      <a class="gelink" role="" onClick="setActive(event)" href="/design/getting_started" id ="/design"
+        {{if eq $.Site.Params.menushortcutsnewtab true}} target="_blank" {{end}} rel="noopener">
+        <span>Design</span>
+      </a>
+    
+    
+      <a  class="gelink" role="" onClick="setActive(event)" href="/develop/getting_started" id="/develop"
+        {{if eq $.Site.Params.menushortcutsnewtab true}} target="_blank" {{end}} rel="noopener">
+        <span>Develop</span>
+      </a>
+   
+    
+   
+      <script>
+         
+          $(function () {
+            setNavigation();
+          });
 
-       <a class="gelink" role=""  onClick="setActive(event)"
-        href="/about/about_torq" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
-        <span>ABOUT</span> 
-       </a>
+          function setNavigation(){
+            var path = window.location.pathname;
+            path = path.replace (/\/$/, "");
+            path = decodeURIComponent(path);
 
-      <a class="gelink" role=""  onClick="setActive(event)"
-        href="/components" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
-        <span>COMPONENTS</span> 
-       </a> 
+            $(" .shortcuts a").each(function () {
+              var href = $(this).attr('id');
+              if(path.substring(0,href.length)=== href){
+                $(this).closest('a').addClass('current');
+              }
+            });
+          }
 
-      <a class="gelink" role=""  onClick="setActive(event)"
-        href="/design/getting_started" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
-        <span>DESIGN</span> 
-       </a> 
+        </script>
 
-       <a class="gelink" role=""  onClick="setActive(event)"
-       href="/develop/getting_started" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
-       <span>DEVELOP</span> 
-      </a> 
-
-  </div> 
+  </div>
   {{- end}}
 
   {{- if not .Site.Params.disableSearch}}
-  <div class="searchdiv";>
-    <div class="searchbox" >
+  <div class="searchdiv" ;>
+    <div class="searchbox">
       <input data-search-input id="search-by" type="text" placeholder="{{T "Search-placeholder"}}">
     </div>
     <script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}"></script>
     <script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}"></script>
     <link href="{{"css/auto-complete.css" | relURL}}" rel="stylesheet">
     <script type="text/javascript">
-      {{ if .Site.IsMultiLingual }}
-          var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
-      {{ else }}
-          var baseurl = "{{.Site.BaseURL}}";
-      {{ end }}
+      { { if .Site.IsMultiLingual } }
+      var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+      { { else } }
+      var baseurl = "{{.Site.BaseURL}}";
+      { { end } }
     </script>
     <script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
   </div>
 
-{{- end}}
+  {{- end}}
 
-<a href="https://guides.github.com/features/mastering-markdown/" target="_blank"><i class='fa fa-gitlab'></i></a>
+  <a href="https://guides.github.com/features/mastering-markdown/" target="_blank"><i class='fa fa-gitlab'></i></a>
 
-</header>
+</header>-->
 
-
-<!--end header-->
-
-<!--
-<header class="mdc-top-app-bar mdc-top-app-bar--fixed" data-mdc-auto-init="MDCTabBar">
+<header>
+<div class="mdc-top-app-bar mdc-top-app-bar--fixed" data-mdc-auto-init="MDCTopAppBar">
     <div class="mdc-top-app-bar__row">
       <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-      
-        <div class="mdc-tab-bar" role="tablist">
+        <div class="mdc-tab-bar" role="tablist" data-mdc-auto-init="MDCTabBar">
           <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
                 <div class="mdc-tab-scroller__scroll-content">
-
-                  <a class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" href="/about">
+                  <a class="mdc-tab" href="/" role="tab" aria-selected="true" id="/">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Home</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--fade">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+                  <a class="mdc-tab" role="tab" href="/about/about_torq" aria-selected="true" id="/about">
                     <span class="mdc-tab__content">
                       <span class="mdc-tab__text-label">About</span>
                     </span>
-                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                    <span class="mdc-tab-indicator mdc-tab-indicator--fade">
                       <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                     </span>
                     <span class="mdc-tab__ripple"></span>
                   </a>
-                  
-                  <a class="mdc-tab" role="tab" aria-selected="true" href="/components">
+                  <a class="mdc-tab" role="tab" href="/components" aria-selected="true" id="/components">
                     <span class="mdc-tab__content">
                       <span class="mdc-tab__text-label">Components</span>
                     </span>
-                    <span class="mdc-tab-indicator">
+                    <span class="mdc-tab-indicator mdc-tab-indicator--fade">
                       <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                     </span>
                     <span class="mdc-tab__ripple"></span>
                   </a>
-
-                  <a class="mdc-tab" role="tab" aria-selected="true" href="/design">
+                  <a class="mdc-tab" role="tab" href="/design/getting_started" aria-selected="true" id="/design">
                     <span class="mdc-tab__content">
                       <span class="mdc-tab__text-label">Design</span>
                     </span>
-                    <span class="mdc-tab-indicator">
+                    <span class="mdc-tab-indicator mdc-tab-indicator--fade">
                       <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                     </span>
                     <span class="mdc-tab__ripple"></span>
                   </a>
-
-                  <a class="mdc-tab" role="tab" aria-selected="true" href="/develop">
-                      <span class="mdc-tab__content">
-                        <span class="mdc-tab__text-label">Develop</span>
-                      </span>
-                      <span class="mdc-tab-indicator">
-                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                      </span>
-                      <span class="mdc-tab__ripple"></span>
-                    </a>
-
+                  <a class="mdc-tab" role="tab" href="/develop/getting_started" aria-selected="true" id="/develop">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Develop</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--fade">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
                 </div>
             </div>
           </div>
         </div>
       </div>
+      </div>
     </div>
-  </header>-->
+  
+   <!-- {{- if not .Site.Params.disableSearch}}
+    
+      <div class="searchbox">
+        <input data-search-input id="search-by" type="text" placeholder="{{T "Search-placeholder"}}">
+      </div>
+
+      <script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}"></script>
+      <script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}"></script>
+      <link href="{{"css/auto-complete.css" | relURL}}" rel="stylesheet">
+      <script type="text/javascript">
+        { { if .Site.IsMultiLingual } }
+        var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+        { { else } }
+        var baseurl = "{{.Site.BaseURL}}";
+        { { end } }
+      </script>
+      <script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
+    
+  
+    {{- end}}
+  
+    <a href="https://guides.github.com/features/mastering-markdown/" target="_blank"><i class='fa fa-gitlab giticon '></i></a>-->
+  </header>
+ 
+
 
   <script>
-      mdc.autoInit();
+    mdc.autoInit();
 
-      function openTab(evt, cityName) {
-               
-                var link= String(document.getElementById(cityName));
-                location.href= link;
-                //evt.currentTarget.className += " active";
-            }
-
-    
+    const tabBarRef = document.querySelector('.mdc-tab-bar');
+    tabBarRef.MDCTabBar.focusOnActivate = false;
+    var path = window.location.pathname;
+    path = path.replace (/\/$/, "");
+    path = decodeURIComponent(path);
+    var tabRefArray = document.querySelectorAll('header .mdc-tab');
+    if (path == "") {
+      tabBarRef.MDCTabBar.foundation_.adapter_.activateTabAtIndex(0);
+    }
+    tabRefArray.forEach(function (p, i) {
+      console.log(p.id);
+      if (path.indexOf(p.id) > -1 && i > 0 || p.id == "/" && path == "") {
+        tabBarRef.MDCTabBar.foundation_.adapter_.activateTabAtIndex(i);
+      }
+      else {
+        tabBarRef.MDCTabBar.foundation_.adapter_.deactivateTabAtIndex(i);
+      }
+    });
   </script>
+<!--end header-->
 
+<!--
+
+  <script>
+      mdc.autoInit(); 
+
+      $(function () {
+        setNavigation();
+      });
+
+      function setNavigation(){
+        var path = window.location.pathname;
+        path = path.replace (/\/$/, "");
+        path = decodeURIComponent(path);
+
+        $(" .mdc-top-app-bar a").each(function () {
+          var href = $(this).attr('href');
+          if(path.substring(0,href.length)=== href){
+            $(this).closest('span').addClass('mdc-tab-indicator--active');
+          }
+        });
+      }
+
+    </script>-->
 
 {{ if ne .Page.Params.Type "home"}}
+
 <article>
   <aside>
     <ul class="menu">
       {{- if not .Site.Params.disableHomeIcon}}
-          <li data-nav-id="{{"/" | relLangURL}}" class="dd-item">
-          <a href="{{"/" | relLangURL}}">
-            <i class="fa fa-fw fa-home"></i>
-          </a>
-          </li>
+      <li data-nav-id="{{"/" | relLangURL}}" class="dd-item">
+        <a href="{{"/" | relLangURL}}">
+          <i class="fa fa-fw fa-home"></i>
+        </a>
+      </li>
       {{- end}}
 
       {{- partial "newmenu.html" . }}
 
     </ul>
-    
+
     {{- partial "language-selector.html" . }}
-   <!-- <section >
+    <!-- <section >
         {{- partial "menu-footer.html" . }}
     </section>-->
   </aside>
-  
 
 
 
-  
+
+
   <section class="page">
-    
+
     <div class="nav-select">
-      <center>Navigation : 
+      <center>Navigation :
         <select onchange="javascript:location.href = this.value;">
           {{partial "flex/selectnavigation.html" .}}
         </select>
@@ -187,17 +272,15 @@
 
 
     <div class="nav-select">
-      <center>Navigation : 
+      <center>Navigation :
         <select onchange="javascript:location.href = this.value;">
           {{partial "flex/selectnavigation.html" .}}
         </select>
       </center>
     </div>
 
-  
-   
-     {{end}}
-<!--
-    {{if not .IsHome}}<h4 class="page-title">{{.Title}}</h4>{{end}}-->
 
-   
+
+    {{end}}
+    <!--
+    {{if not .IsHome}}<h4 class="page-title">{{.Title}}</h4>{{end}}-->

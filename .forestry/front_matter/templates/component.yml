@@ -31,3 +31,5 @@ fields:
   description: Dark UI version of the component
   config:
     maxSize: '1'
+pages:
+- content/Components/slider.md

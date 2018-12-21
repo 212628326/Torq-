@@ -16,7 +16,7 @@ githubLink = ""
 +++
 
 
-
+{{% card %}}
 #### Setup
 
 ##### Installation
@@ -55,14 +55,18 @@ Using any of the HTML tags listed in the table above will automatically apply th
 
     <h4>This is a section header</h4>
 
+
 ##### Font Profile CSS Classes 
 
 Each font profile also has an accompanying CSS class.
 
     <div class="torq-typ--section-header">This is also a section header.</div>
-\
-\
 
+{{% /card %}}
+
+
+
+{{% card %}}
 #### CSS Classes
 
 | Class Name |  Description |
@@ -77,10 +81,10 @@ Each font profile also has an accompanying CSS class.
 | `torq-body2`| Sets font to Body 2 |
 | `torq-chart__title`| Sets font to Chart Title |
 
-\
-\
-\
+{{% /card %}}
 
+
+{{% card %}}
 #### Font Weights
 
 | Weight |  Value | CSS Class |
@@ -95,4 +99,4 @@ Adjust font weights using the available CSS classes.
 
     <div class="weight--bold">This is some bold text.</div>
 
-    
+{{% /card %}}

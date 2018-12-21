@@ -7,5 +7,3 @@ pagetype = "design"
 
 +++
 
-
-#### aldjflkaskdfjlasjdlfjdas

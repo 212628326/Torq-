@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700,800');
 
-$torq-font-family: "Heebo", sans-serif !default;
+$torq-font-family: "Roboto", sans-serif !default;
 $mdc-typography-font-family: $torq-font-family;
 
 html {
@@ -75,9 +75,16 @@ h6, .torq-title2 {
 }
 
 //Body Copy & Buttons
-body, button, td, p, .torq-body1 {
+body, button, p, .torq-body1 {
   font-size: 15px;
   font-weight: 400!important; //medium
+  line-height: 26px;
+  color: #2C404C;
+}
+
+td {
+  font-size: 15px;
+  font-weight: 500!important; //medium
   line-height: 26px;
   color: #2C404C;
 }
@@ -103,3 +110,11 @@ th, .torq-chart__title {
 :host {
   font-family: $torq-font-family;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.85rem 0 1.7rem 0;
+  text-rendering: optimizeLegibility; }
+
+  h6, b{
+    margin-bottom: .5rem;
+  }

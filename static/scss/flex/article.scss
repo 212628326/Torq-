@@ -34,17 +34,18 @@ article section.page {
     table {
         width: 100%;
         margin-bottom: 2em;
-
         border-collapse: collapse;
         border-spacing: 0;
-        border: 1px solid #e6e6e6;
+        //border: 1px solid #e6e6e6;
 
 
         td {
             padding: 0.5rem;
+            height: 40px;
             vertical-align: middle;
             border-bottom: 1px solid #C7D4DD;
-            border: 1px solid #C7D4DD;
+            border-top: 1px solid #C7D4DD;
+            //border: 1px solid #C7D4DD;
             
         }
 
@@ -98,8 +99,10 @@ article section.page {
     }
 
     pre {
-        background-color: #ffffff;
-        border: 1px solid #C7D4DD;
+        
+        //background-color: #F7F7FB;
+        background-color: rgba(63, 116, 194, 0.15);
+        border: 1px solid #508BE4;
         border-radius: .2rem;
         color: #2C404C;
         overflow: auto;

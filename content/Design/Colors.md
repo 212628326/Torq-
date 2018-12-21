@@ -52,6 +52,8 @@ dataVis = [{Hex = "#ffffff", Sass= "", Use = ""}]
         Use = "Outline"
 +++
 
+
+{{% card %}}
 #### Best Practices 
 
 Use Primary colors for their specific uses. And for action items and or items of importance please use default blue.
@@ -65,3 +67,5 @@ Color indicates which elements are interactive, how they relate to other element
 ##### Legibility
 
 Text and important elements, like icons, should meet legibility standards when appearing on colored backgrounds across all screen and device types.
+
+{{% /card %}}

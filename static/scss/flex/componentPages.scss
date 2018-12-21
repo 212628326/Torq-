@@ -44,6 +44,7 @@
     height: auto;
     width: auto;
     margin-bottom: 30px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, .10);
 }
 
 
@@ -80,7 +81,7 @@
     padding-bottom: 20px;
     min-height: 250px;
     max-height: auto;
-    width: 80%; //background-color: #f1eeee;
+    width: 80%; 
     border: 1px solid #C7D4DD;
     background-color: #ffffff;
 }
@@ -94,8 +95,7 @@
 }
 
 .description {
-    font-size: 16px;
-    width: 80%;
+    width: 85%;
 }
 
 .darkswitch {
@@ -144,24 +144,26 @@
 
 
 .color-values {
-    margin-right:20px;
-    margin-top:20px;
+    //margin-right:20px;
+    //margin-top:20px;
+    margin-bottom: 50px;
+    margin-left: 15px;
 }
 
 .swatch {
     height: 40px;
     width: 242px;
-    border-radius: 30px;
-   // @include mdc-elevation(11, #000000, .05);
-    box-shadow: 6px 11px 12px rgba(43, 48, 55, .27);
+    //box-shadow: 0 4px 11px 1px rgba(43, 48, 55, .16);
+    box-shadow: -4px 2px 15px rgba(0, 0, 0, .30);
+   
 }
 
 .swatch-status{
     height: 40px;
     width: 175px;
-    border-radius: 30px;
-   // @include mdc-elevation(11, #000000, .05);
-    box-shadow: 6px 11px 12px rgba(43, 48, 55, .27);
+   //box-shadow: 0 4px 11px 1px rgba(43, 48, 55, .16);
+    box-shadow: -4px 2px 15px rgba(0, 0, 0, .30);
+   
 }
 
 

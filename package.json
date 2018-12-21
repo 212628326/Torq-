@@ -33,6 +33,7 @@
     "@material/tab-bar": "^0.40.0",
     "@material/tab-indicator": "^0.40.0",
     "@material/tab-scroller": "^0.40.0",
+    "@torq-design/typography": "^0.3.2",
     "material-components-web": "^0.40.0"
   }
 }

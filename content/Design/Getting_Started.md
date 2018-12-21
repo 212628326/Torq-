@@ -7,7 +7,7 @@ weight = 1
 
 +++
 
-
+{{% card %}}
 ##### Download Sketch Files here
 
 The Sketch file includes Torq component symbols, color swatches and sample layouts to help get you started.
@@ -28,3 +28,5 @@ The Heebo font is used across all Torq applications. Download it for free here.
 <button class='torq-button--outlined torq-button--primary-outlined '>
         Download Heebo Font
 </button>
+
+{{% /card %}}

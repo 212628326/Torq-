@@ -16,7 +16,7 @@ githubLink = ""
 +++
 
 
-
+{{% card %}}
 #### Setup
 
 ##### Installation
@@ -32,10 +32,9 @@ Import the SCSS styles into your base styling file.
 
 Make sure your project's SASS compiler is configured to look in the node_modules directory.
 
-\
-\
+{{% /card %}}
 
-
+{{% card %}}
 #### Light Theme Classes 
 
 Use these colors when building a light themed UI only
@@ -52,12 +51,11 @@ Use these colors when building a light themed UI only
 | `$torq-header-text-color` | Header Text | `#202028` |
 | `$torq-subtext-color` | Sub-text | `#596578` |
 | `$torq-chart-text-color` | Chart Text | `#596578` |
+{{% /card %}}
 
 
-\
-\
-\
 
+{{% card %}}
 #### Dark Theme Classes 
 
 Use these colors when building a dark themed UI only
@@ -74,11 +72,10 @@ Use these colors when building a dark themed UI only
 | `$torq-dark-header-text-color` | Header Text | `#FFFFFF` |
 | `$torq-dark-subtext-color` | Sub-text | `#A8B5BF` |
 | `$torq-dark-chart-text-color` | Chart Text | `#A8B5BF` |
+{{% /card %}}
 
-\
-\
-\
 
+{{% card %}}
 #### Supporting Colors
 
 Supporting colors are the same for both dark and light UI.
@@ -87,21 +84,21 @@ Supporting colors are the same for both dark and light UI.
 
 | SCSS Variable | Hex Value
 |:--|:--|
-| `$torq-status-red`    | `#F34336` |
-| `$torq-status-orange` | `#FF8B3A` |
-| `$torq-status-yellow` | `#FEC600` |
-| `$torq-status-green`  | `#7FAE1B` |
-| `$torq-status-blue`   | `#508BE4` |
+| `$status-red`    | `#F34336` |
+| `$status-orange` | `#FF8B3A` |
+| `$status-yellow` | `#FEC600` |
+| `$status-green`  | `#7FAE1B` |
+| `$status-blue`   | `#508BE4` |
 
 
 ##### Data Visualization Colors
 
 | SCSS Variable | Hex Value
 |:--|:--|
-| `$torq-data-pink`    | `#F97DD8` |
-| `$torq-data-purple` | `#9150E4` |
-| `$torq-data-cyan` | `#50CCE4` |
-| `$torq-data-green`  | `#61D883` |
-| `$torq-data-yellow`   | `#E4CB50` |
-| `$torq-data-orange`   | `#E4A350` |
-
+| `$data-pink`    | `#F97DD8` |
+| `$data-purple` | `#9150E4` |
+| `$data-cyan` | `#50CCE4` |
+| `$data-green`  | `#61D883` |
+| `$data-yellow`   | `#E4CB50` |
+| `$data-orange`   | `#E4A350` |
+{{% /card %}}

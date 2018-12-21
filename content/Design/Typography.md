@@ -7,12 +7,12 @@ pagetype = "design"
 
 +++
 
-\
+{{% card %}}
 #### Best Practices
 
-##### Always Use Heebo
+##### Always Use Roboto
 
-Heebo is a significant part of TORQ. It was hand selected out of hundreds of fonts because of its legibility and industrial look and feel. 
+Roboto is a significant part of TORQ. It was hand selected out of hundreds of fonts because of its legibility and industrial look and feel. 
 
 ##### Create Heirarchy
 
@@ -28,3 +28,4 @@ our guidelines, the rest of the workflow should follow those same type rules set
 
 Although Heebo comes in Extra Bold and Black, TORQ discourages using them on web and ui applications.
 
+{{% /card %}}

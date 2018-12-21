@@ -1,0 +1,33 @@
+---
+label: Component
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Component Name
+  description: Enter the name of the component
+  config:
+    required: true
+- type: textarea
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Description
+  name: description
+  description: Description of the component
+- type: file
+  name: lightThumbnail
+  label: Light UI Image
+  description: Light UI version of the component
+  hidden: false
+  config:
+    maxSize: '1'
+- type: file
+  name: darkThumbnail
+  label: Dark UI Image
+  description: Dark UI version of the component
+  config:
+    maxSize: '1'

@@ -43,5 +43,6 @@ fields:
   name: componentType
   label: Component Type
   default: torq
+  hidden: true
 pages:
 - content/Components/table.md

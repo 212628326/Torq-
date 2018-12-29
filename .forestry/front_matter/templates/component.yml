@@ -39,3 +39,5 @@ fields:
   name: githubLink
   label: Github URL
   description: Enter the github url for this component
+pages:
+- content/Components/table.md

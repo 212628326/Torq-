@@ -8,7 +8,6 @@ title = "About TORQ"
 
 TORQ is GE Transportations new design system. It creates a common language on a common platform designed and built with developers and customers to enable to teams to work faster and more efficiently.
 
-  
 \\
 
 #### Value of TORQ
@@ -19,14 +18,12 @@ TORQ is Adaptable - A design system that is able to be used across any software
 
 TORQ is Consistent - Consistency throughout the design language to provide a unified software
 
-  
 \\
 
 #### Who is TORQ For
 
 For developers and Designers in the transportation industry
 
-  
 \\
 
 #### How we built it

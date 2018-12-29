@@ -31,5 +31,13 @@ fields:
   description: Dark UI version of the component
   config:
     maxSize: '1'
+- type: text
+  name: demoLink
+  label: Demo URL
+  description: Enter the url to the component demo in Stackblitz
+- type: text
+  name: githubLink
+  label: Github URL
+  description: Enter the github url for this component
 pages:
 - content/Components/slider.md

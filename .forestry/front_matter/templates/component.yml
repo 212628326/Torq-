@@ -39,5 +39,9 @@ fields:
   name: githubLink
   label: Github URL
   description: Enter the github url for this component
+- type: text
+  name: componentType
+  label: Component Type
+  default: torq
 pages:
 - content/Components/table.md

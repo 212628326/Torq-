@@ -43,4 +43,4 @@ fields:
   name: componentType
   label: Component Type
   default: torq
-  hidden: true
+  hidden: false

@@ -1,6 +1,6 @@
 +++
 componentType = "torq"
-darkThumbnail = ""
+darkThumbnail = "/images/icon2.png"
 date = "2019-01-07T16:57:56+00:00"
 demoLink = ""
 description = "Icons are visual representations of important concepts in your application"
@@ -12,12 +12,12 @@ title = "Icon"
 +++
 Icons are awesome
 
-%card%
+{{% card %}}
 
-test 1 
+#### test 1
 
-Test 2 
+Test 2
 
 Test 3
 
-%card%
+{{% /card %}}

@@ -38,4 +38,19 @@ Import the component into your sass file
 
 {{% container %}}
 
+#### Title
+
+| SCSS Variable | Usage | Hex Value |
+| :--- | :--- | :--- |
+| $torq-primary-color | Call to Action & Items of Importance | #508BE4 |
+| $torq-background | Page Background Gradient | linear-gradient(176.98deg, #F7F9FB 0%, #D6DFEC 100%) |
+| $torq-title-bar-background | Title Bar Background | #FFFFFF |
+| $torq-top-bar-background | Top Bar Background | #F7F7FB |
+| $torq-card-background | Card Background | #FFFFFF |
+| $torq-outline | Outlines & Table Borders | #C7D4DD |
+| $torq-text-color | General Purpose Text | #2C404C |
+| $torq-header-text-color | Header Text | #202028 |
+| $torq-subtext-color | Sub-text | #596578 |
+| $torq-chart-text-color | Chart Text | #596578 |
+
 {{% /container %}}

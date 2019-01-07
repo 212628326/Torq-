@@ -48,6 +48,5 @@ fields:
   description: Determines the type of component this is. Default value should be "torq"
   default: torq
 pages:
-- content/Components/date-picker.md
 - content/Components/icon.md
 - content/Components/table.md

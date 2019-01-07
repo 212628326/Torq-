@@ -43,4 +43,5 @@ fields:
   default: torq
 pages:
 - content/Components/date-picker.md
+- content/Components/icon.md
 - content/Components/table.md

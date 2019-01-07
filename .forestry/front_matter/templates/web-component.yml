@@ -16,7 +16,7 @@ fields:
   config:
     required: true
 - type: select
-  name: componentType
+  name: type
   config:
     source:
       type: simple

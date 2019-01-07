@@ -10,14 +10,32 @@ lightThumbnail = "/images/icon.png"
 title = "Icon"
 
 +++
-Icons are awesome
+{{% container %}}
 
-{{% card %}}
+#### Setup
 
-#### test 1
+##### Installation
 
-Test 2
+Using the command line, install the component into your project using the `npm` command.
 
-Test 3
+    Insert code here
 
-{{% /card %}}
+##### Import Sass Styles
+
+Import the component into your sass file
+
+    Insert code here
+
+{{% /container %}}
+
+{{% container %}}
+
+#### HTML Structure
+
+    Insert component HTML Code here
+
+{{% /container %}}
+
+{{% container %}}
+
+{{% /container %}}

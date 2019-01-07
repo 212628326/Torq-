@@ -48,6 +48,16 @@ fields:
   name: type
   description: What type of component is this?
   default: web
+- type: select
+  name: pagetype
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - components
+  label: Pagetype
+  description: Enter in the page type
 pages:
 - content/Components/icon.md
 - content/Components/date-picker.md

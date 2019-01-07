@@ -36,11 +36,18 @@ fields:
   name: githubLink
   label: Github URL
   description: Enter the github url for this component
-- type: text
-  name: componentType
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - torq
+    - web
+    required: true
   label: Component Type
-  default: torq
-  hidden: false
+  name: type
+  description: What type of component is this?
+  default: web
 pages:
 - content/Components/icon.md
 - content/Components/table.md

@@ -34,3 +34,5 @@ fields:
   name: demoLink
   label: Demo URL
   description: Enter in the url for the component demo in Stackblitz
+pages:
+- content/Web_Components/icon.md

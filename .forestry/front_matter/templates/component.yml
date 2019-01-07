@@ -42,7 +42,6 @@ fields:
   description: component type
   default: torq
 pages:
-- content/Components/icon.md
 - content/Components/date-picker.md
 - content/Components/help.md
 - content/Components/drop-down.md

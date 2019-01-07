@@ -50,4 +50,5 @@ fields:
   default: web
 pages:
 - content/Components/icon.md
+- content/Components/date-picker.md
 - content/Components/table.md

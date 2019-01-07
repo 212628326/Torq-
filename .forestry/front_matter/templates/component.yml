@@ -51,5 +51,4 @@ fields:
 pages:
 - content/Components/icon.md
 - content/Components/date-picker.md
-- content/Components/test.md
 - content/Components/table.md

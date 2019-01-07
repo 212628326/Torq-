@@ -36,28 +36,11 @@ fields:
   name: githubLink
   label: Github URL
   description: Enter the github url for this component
-- type: select
-  config:
-    source:
-      type: simple
-    options:
-    - torq
-    - web
-    required: true
+- type: text
+  name: componentType
   label: Component Type
-  name: type
-  description: What type of component is this?
-  default: web
-- type: select
-  name: pagetype
-  config:
-    source:
-      type: simple
-    required: true
-    options:
-    - components
-  label: Pagetype
-  description: Enter in the page type
+  description: component type
+  default: torq
 pages:
 - content/Components/icon.md
 - content/Components/date-picker.md

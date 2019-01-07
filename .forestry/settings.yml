@@ -4,16 +4,8 @@ auto_deploy: true
 admin_path: ''
 webhook_url: 
 sections:
-- type: directory
-  path: content
-  label: Pages
-  create: all
-  match: "*"
-- type: directory
-  path: content/About
-  label: About
-  create: all
-  match: "**/*"
+- type: heading
+  label: Component Documentation
 - type: directory
   path: content/Components
   label: Components
@@ -22,6 +14,16 @@ sections:
 - type: directory
   path: content/Web_Components
   label: Web components
+  create: all
+  match: "**/*"
+- type: directory
+  path: content
+  label: Pages
+  create: all
+  match: "*"
+- type: directory
+  path: content/About
+  label: About
   create: all
   match: "**/*"
 - type: directory

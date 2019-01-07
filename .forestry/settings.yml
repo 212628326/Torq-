@@ -5,6 +5,18 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: heading
+  label: Home & About Pages
+- type: directory
+  path: content
+  label: Pages
+  create: all
+  match: "*"
+- type: directory
+  path: content/About
+  label: About
+  create: all
+  match: "**/*"
+- type: heading
   label: Component Documentation
 - type: directory
   path: content/Components
@@ -20,16 +32,6 @@ sections:
   match: "**/*"
   templates:
   - web-component
-- type: directory
-  path: content
-  label: Pages
-  create: all
-  match: "*"
-- type: directory
-  path: content/About
-  label: About
-  create: all
-  match: "**/*"
 - type: heading
   label: Design & Development Docs
 - type: directory

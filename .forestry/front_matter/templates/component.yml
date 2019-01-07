@@ -49,4 +49,5 @@ fields:
   default: torq
 pages:
 - content/Components/icon.md
+- content/accordien.md
 - content/Components/table.md

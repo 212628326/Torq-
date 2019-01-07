@@ -9,13 +9,17 @@ sections:
 - type: directory
   path: content/Components
   label: Components
-  create: all
+  create: documents
   match: "**/*"
+  templates:
+  - component
 - type: directory
   path: content/Web_Components
   label: Web components
-  create: all
+  create: documents
   match: "**/*"
+  templates:
+  - web-component
 - type: directory
   path: content
   label: Pages
@@ -26,11 +30,15 @@ sections:
   label: About
   create: all
   match: "**/*"
+- type: heading
+  label: Design & Development Docs
 - type: directory
   path: content/Design
   label: Design
-  create: all
+  create: documents
   match: "**/*"
+  templates:
+  - design
 - type: directory
   path: content/Develop
   label: Develop

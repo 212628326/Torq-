@@ -10,7 +10,7 @@ lightThumbnail = "/images/icon.png"
 title = "Icon"
 
 +++
-{{% container %}}
+{{% card %}}
 
 #### Setup
 
@@ -26,17 +26,17 @@ Import the component into your sass file
 
     Insert code here
 
-{{% /container %}}
+{{% /card %}}
 
-{{% container %}}
+{{% card %}}
 
 #### HTML Structure
 
     Insert component HTML Code here
 
-{{% /container %}}
+{{% /card %}}
 
-{{% container %}}
+{{% card %}}
 
 #### Title
 
@@ -53,4 +53,4 @@ Import the component into your sass file
 | $torq-subtext-color | Sub-text | #596578 |
 | $torq-chart-text-color | Chart Text | #596578 |
 
-{{% /container %}}
+{{% /card %}}

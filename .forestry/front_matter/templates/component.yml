@@ -45,4 +45,5 @@ fields:
   default: torq
   hidden: false
 pages:
+- content/Components/icon.md
 - content/Components/table.md

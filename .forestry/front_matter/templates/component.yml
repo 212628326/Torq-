@@ -9,15 +9,12 @@ fields:
   description: Enter the name of the component
   config:
     required: true
-- type: textarea
+- type: text
+  name: description
+  label: Description
+  description: Enter description of the component
   config:
     required: true
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Description
-  name: description
-  description: Description of the component
 - type: file
   name: lightThumbnail
   label: Light UI Image

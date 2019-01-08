@@ -7,7 +7,7 @@ description = "Use this template for creating new components"
 draft = true
 githubLink = ""
 lightThumbnail = ""
-title = "A Template Component Documentation"
+title = "A Template "
 
 +++
 {{% card %}}   

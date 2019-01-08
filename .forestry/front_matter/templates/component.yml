@@ -50,4 +50,5 @@ fields:
 pages:
 - content/Components/icon.md
 - content/Components/a-template-component-documentation.md
+- content/Components/a-template-for-new-components-copy.md
 - content/Components/table.md

@@ -41,5 +41,15 @@ Import the SCSS styles into your base styling file
 #### Classes
 
 \** Tables must be created in the raw editor. Click the menu then select Raw Editor to edit the table in Markdown
+| Header 1 |  Header 2 | Header 3
+|:--|:--|:--|
+| `class name` | class description | `class value` |
+| `class name` | class description | `class value` |
+| `class name` | class description | `class value` |
+| `class name` | class description | `class value` |
+| `class name` | class description | `class value` |
+| `class name` | class description | `class value` |
+| `class name` | class description | `class value` |
+| `class name` | class description | `class value` |
 
 {{% /card %}}

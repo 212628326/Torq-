@@ -3,7 +3,7 @@ componentType = "torq"
 darkThumbnail = ""
 date = "2019-01-08T16:21:55+00:00"
 demoLink = ""
-description = "Use this template for creating new components"
+description = "Use this template for writing component documentation"
 draft = true
 githubLink = ""
 lightThumbnail = ""
@@ -40,16 +40,17 @@ Import the SCSS styles into your base styling file
 
 #### Classes
 
-\** Tables must be created in the raw editor. Click the menu then select Raw Editor to edit the table in Markdown
-| Header 1 |  Header 2 | Header 3
-|:--|:--|:--|
-| `class name` | class description | `class value` |
-| `class name` | class description | `class value` |
-| `class name` | class description | `class value` |
-| `class name` | class description | `class value` |
-| `class name` | class description | `class value` |
-| `class name` | class description | `class value` |
-| `class name` | class description | `class value` |
-| `class name` | class description | `class value` |
+\** Tables must be created in the raw markdown editor. Click the menu then select Raw Editor to edit the table in markdown
+
+| Header 1 | Header 2 | Header 3 |
+| :--- | :--- | :--- |
+| class name | class description | class value |
+| class name | class description | class value |
+| class name | class description | class value |
+| class name | class description | class value |
+| class name | class description | class value |
+| class name | class description | class value |
+| class name | class description | class value |
+| class name | class description | class value |
 
 {{% /card %}}

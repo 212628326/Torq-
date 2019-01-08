@@ -10,7 +10,7 @@ lightThumbnail = ""
 title = "A Template "
 
 +++
-{{% card %}}   
+{{% card %}}
 
 #### Setup
 
@@ -26,7 +26,7 @@ Import the SCSS styles into your base styling file
 
     insert code here
 
-{{% /card %}} 
+{{% /card %}}
 
 {{% card %}}
 
@@ -34,4 +34,12 @@ Import the SCSS styles into your base styling file
 
     Enter component HTML
 
-{{% /card %}} 
+{{% /card %}}
+
+{{% card %}}
+
+#### Classes
+
+\** Tables must be created in the raw editor. Click the menu then select Raw Editor to edit the table in Markdown
+
+{{% /card %}}

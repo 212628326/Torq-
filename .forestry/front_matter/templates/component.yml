@@ -49,4 +49,5 @@ fields:
   default: torq
 pages:
 - content/Components/icon.md
+- content/Components/a-template-component-documentation.md
 - content/Components/table.md

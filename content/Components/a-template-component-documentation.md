@@ -22,7 +22,7 @@ Using the command line, install the button component into your project using the
 
 ##### Import Sass Styles
 
-Import the SCSS styles into your base styling file
+Import the SCSS styles into your base styling file 
 
     insert code here
 

@@ -1,9 +1,47 @@
 <div class="right">
-        <div id="toc">
-        {{if eq .Params.pagetype "components"}}
-         <span><h6>Version:</h6> {{.Params.version}}</span>
-         {{end}}
+        <div id="toc" class="custom">
+                {{if eq .Params.pagetype "components"}}
+                <span>
+                        <h6>Version:</h6> {{.Params.version}}
+                </span>
+                {{end}}
 
-         <span> <h6>In this Article:</h6>{{.TableOfContents}}</span>
+                <span>
+                        <h6>In this Article:</h6>{{.TableOfContents}}
+                </span>
+
         </div>
 </div>
+
+<script>
+
+        var ToC =
+                "<nav role='navigation'" +
+                "<h6>On this page:</h6>" +
+                "<ul>";
+
+        var newLine, el, title, link;
+
+        $("h4").each(function () {
+
+                el = $(this);
+                title = el.text();
+                link = "#" + el.attr("id");
+
+                newLine =
+                        "<li>" +
+                        "<a href='" + link + "'>" +
+                        title +
+                        "</a>" +
+                        "</li>";
+
+                ToC += newLine;
+                ToC += "</ul>" +
+                        "</nav>";
+
+        });
+
+        $(".custom").prepend(ToC);
+
+</script>
+

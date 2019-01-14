@@ -19,7 +19,8 @@
             <div class="description" >
                 
                 {{ if eq .Title "Colors"}}
-                    {{ partial "flex/color-swatches.html" .}}
+                    {{ partial "flex/color-swatches.html" . }}
+
                 {{end}}
 
                 {{ if eq .Title "Typography" }}

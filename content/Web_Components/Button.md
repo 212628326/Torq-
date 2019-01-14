@@ -5,16 +5,17 @@ description = ""
 author = ""
 version ="2"
 type = "web" 
+componentType = "web"
 lightThumbnail = "" #image path for dark thumbnail
 darkThumbnail = "" #image path for dark thumbnail 
-lightDemo = "" #Enter HTML for Light version
-darkDemo = "" #Enter HTML for Dark version
+githubLink = "https://forestry.io/"
+demoLink = "" 
 pagetype="components"
 
 
 +++
 
-### Setup
+#### Setup
 
 ##### Installation
 Install the component into your project via npm
@@ -32,7 +33,7 @@ Import the component into your sass file
 \
 \
 
-### Single HTML Tag
+#### Single HTML Tag
 
     insert code here
 \

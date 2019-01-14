@@ -86,6 +86,8 @@
 </div>-->
 
 
+
+
         <!--this is the tab content for a standard component-->
         <div id="torq-component" class="tabcontent">
 
@@ -99,29 +101,43 @@
                 </span>
             </div>
 
-            
-                    {{.Content}}
-               
+    
+            {{.Content}}
 
             {{ partial "flex/tablecontents.html" . }}
+           
 
         </div>
 
 
-        <!--this is the tab content for a web component-->
+        <!--this is the tab content for web component documentation-->
         <div id="web-component" class="tabcontent">
-
+ 
             {{$webcomponent := .Title}}
             {{$table := .Page.TableOfContents}}
+
             {{ range where .Site.Pages "Type" "=" "web" }}
-            {{ if eq $webcomponent .Title}}
+                {{ if eq $webcomponent .Title}}
+                
+                <div style="margin-top: 15px; margin-bottom: 30px;">
+                    <span style="margin-right: 20px;">
+                        <a href="{{.Params.demoLink}}" target="_blank"> View StackBlitz Demo</a>
+                    </span>
+    
+                    <span>
+                        <a href="{{.Params.githubLink}}" target="_blank">View Github</a>
+                    </span>
+                </div>
+                
+                
+                    {{ .Content }}
+                   
 
-            {{ .Content }}
-            {{ partial "flex/tablecontents.html" . }}
+                    {{ partial "flex/tablecontents.html" . }}
+
+                {{ end }}
             {{ end }}
-            {{ end }}
-
-
+            
 
         </div>
     </div>
@@ -149,13 +165,17 @@
     </script>
 
 
-
     <script>
         function openCity(evt, cityName) {
             var i, tabcontent, tablinks;
+            var partial = document.getElementById ("TOCpartial");
+            var partial2 = document.getElementById ("TOCpartial2");
+
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
+                
+                
             }
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
@@ -163,6 +183,8 @@
             }
             document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " active";
+            
+            
         }
 
         // Get the element with id="defaultOpen" and click on it

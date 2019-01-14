@@ -4,39 +4,51 @@ auto_deploy: true
 admin_path: ''
 webhook_url: 
 sections:
+- type: heading
+  label: Component Documentation
 - type: directory
-  path: content
-  label: Pages
+  path: content/Components
+  label: Components
+  create: documents
+  match: "**/*"
+  templates:
+  - component
+- type: directory
+  path: content/Web_Components
+  label: Web components
+  create: documents
+  match: "**/*"
+  templates:
+  - web-component
+- type: heading
+  label: Design & Development Docs
+- type: directory
+  path: content/Design
+  label: Design
+  create: documents
+  match: "**/*"
+  templates:
+  - design
+- type: directory
+  path: content/Develop
+  label: Develop
   create: all
-  match: "*"
+  match: "**/*"
+- type: heading
+  label: Home & About Pages
 - type: directory
   path: content/About
   label: About
   create: all
   match: "**/*"
 - type: directory
-  path: content/Components
-  label: Components
+  path: content
+  label: Pages
   create: all
-  match: "**/*"
-- type: directory
-  path: content/Web_Components
-  label: Web components
-  create: all
-  match: "**/*"
-- type: directory
-  path: content/Design
-  label: Design
-  create: all
-  match: "**/*"
-- type: directory
-  path: content/Develop
-  label: Develop
-  create: all
-  match: "**/*"
+  match: "*"
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
-version: '0.48'
+version: '0.53'

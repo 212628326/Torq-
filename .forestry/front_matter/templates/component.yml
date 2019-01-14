@@ -36,12 +36,19 @@ fields:
   name: githubLink
   label: Github URL
   description: Enter the github url for this component
-- type: text
+- type: select
   name: componentType
+  config:
+    source:
+      type: simple
+    options:
+    - torq
+    required: true
   label: Component Type
-  description: component type
+  description: Determines the type of component this is. Default value should be "torq"
   default: torq
 pages:
-- content/Components/date-picker.md
 - content/Components/icon.md
+- content/Components/a-template-component-documentation.md
+- content/Components/a-template-for-new-components-copy.md
 - content/Components/table.md

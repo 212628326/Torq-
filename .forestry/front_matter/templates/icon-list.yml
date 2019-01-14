@@ -13,3 +13,5 @@ fields:
   - type: file
     name: image
     label: image
+pages:
+- content/Design/test-icon.md

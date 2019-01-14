@@ -1,0 +1,15 @@
+---
+label: Icon List
+hide_body: false
+is_partial: false
+fields:
+- type: field_group_list
+  name: test
+  label: Icons
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: file
+    name: image
+    label: image

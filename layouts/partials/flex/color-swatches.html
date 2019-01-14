@@ -1,224 +1,66 @@
 <!--Light Color Swatches-->
 
+
+<h4>Light UI Color Palette</h4>
 <div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; width: 786px; margin-bottom: 90px;">
 
-    <!--
-{{ range .Params.lightUI}}
-{{ .Params.lightUI.Hex}}
+    {{ range .Page.Params.lightUI}}
 
-        <div class="color-values">
-            <div class="swatch" style="background-color: #FFFFFF;">
-            </div>
-            <h6> {{ . }} </h6>
-            <b class="torq-body2">#FFFFFF</b>
+    <div class="color-values">
+        <div class="swatch" style="background-color: {{.Hex}};">
         </div>
-
-{{end}}
-</div> 
-
--->
-
-
-
-    <h4>Light UI Color Palette</h4>
-    <div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; width: 786px; margin-bottom: 90px;">
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #FFFFFF;">
-            </div>
-            <h6>White</h6>
-            <b class="torq-body1">Title Bar & Cards</b><br>
-            <b class="torq-body2">#FFFFFF</b>
-        </div>
-        <div class="color-values">
-            <div class="swatch" style="background-color: #F7F7FB;">
-            </div>
-            <h6>Light Blue 1</h6>
-            <b class="torq-body1">Top Bar</b><br>
-            <b class="torq-body2">#F7F7FB</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #C7D4DD;">
-            </div>
-            <h6>Light Blue 2</h6>
-            <b class="torq-body1">Outline</b><br>
-            <b class="torq-body2">#C7D4DD</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #596578;">
-            </div>
-            <h6>Light Blue 3</h6>
-            <b class="torq-body1">Chart Titles & Subtext</b><br>
-            <b class="torq-body2">#596578</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #2C404C;">
-            </div>
-            <h6>Light Blue 4</h6>
-            <b class="torq-body1">Text</b><br>
-            <b class="torq-body2">#2C404C</b>
-        </div>
-
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #202028;">
-            </div>
-            <h6>Light Blue 5</h6>
-            <b class="torq-body1">Header Text</b><br>
-            <b class="torq-body2">#202028</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #508BE4;">
-            </div>
-            <h6>Torq Blue</h6>
-            <b class="torq-body1">Action or Selected Item</b><br>
-            <b class="torq-body2">#508BE4</b>
-        </div>
+        <h6> {{ .Name }} </h6>
+        <b class="torq-body2">{{.Hex}}</b>
     </div>
 
+    {{end}}
+</div>
 
 
+<!-- Dark Color Swatches -->
+<h4>Dark UI Color Palette</h4>
+<div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; width: 786px; margin-bottom: 90px;">
 
-    <!--Dark Color Swatches-->
+    {{ range .Page.Params.darkUI}}
 
-    <h4>Dark UI Color Palette</h4>
-    <div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; margin-bottom: 90px; ">
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #151E26;">
-            </div>
-            <h6>Dark Blue 4</h6>
-            <b class="torq-body1">Title Bar</b><br>
-            <b class="torq-body2">#151E26</b>
+    <div class="color-values">
+        <div class="swatch" style="background-color: {{.Hex}};">
         </div>
-        <div class="color-values">
-            <div class="swatch" style="background-color: #1D2E40;">
-            </div>
-            <h6>Dark Blue 3</h6>
-            <b class="torq-body1">Top Bar & Cards</b><br>
-            <b class="torq-body2">#1D2E40</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #66757F;">
-            </div>
-            <h6>Dark Blue 2</h6>
-            <b class="torq-body1">Grids, Tables & Outlines</b><br>
-            <b class="torq-body2">#66757F</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #A8B5BF">
-            </div>
-            <h6>Dark Blue 1</h6>
-            <b class="torq-body1">Chart & Sub-text</b><br>
-            <b class="torq-body2">#A8B5BF</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #FFFFFF;">
-            </div>
-            <h6>White</h6>
-            <b class="torq-body1">Text</b><br>
-            <b class="torq-body2">#FFFFFF</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #508BE4;">
-            </div>
-            <h6>Torq Blue</h6>
-            <b class="torq-body1">Action or Selected Items</b><br>
-            <b class="torq-body2">#508BE4</b>
-        </div>
+        <h6> {{ .Name }} </h6>
+        <b class="torq-body2">{{.Hex}}</b>
     </div>
 
+    {{end}}
+</div>
 
+<!-- Dark Color Swatches -->
+<h4>Status Colors</h4>
+<div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; width: 786px; margin-bottom: 50px; ">
 
-    <!--Status Swatches-->
+    {{ range .Page.Params.statusColors}}
 
-
-    <h5>Status Colors</h5>
-    <div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; width: 786px; margin-bottom: 50px; ">
-
-        <div class="color-values">
-            <div class="swatch-status" style="background-color: #F34336;">
-            </div>
-            <h6>Status Red</h6>
-            <b class="torq-body2">#F34336</b>
+    <div class="color-values">
+        <div class="swatch-status" style="background-color: {{.Hex}};">
         </div>
-        <div class="color-values">
-            <div class="swatch-status" style="background-color: #FF8B3A;">
-            </div>
-            <h6>Stauts Orange</h6>
-            <b class="torq-body2">#FF8B3A</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch-status" style="background-color: #FEC600;">
-            </div>
-            <h6>Status Yellow</h6>
-            <b class="torq-body2">#FEC600</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch-status" style="background-color: #7FAE1B;">
-            </div>
-            <h6>Status Green</h6>
-            <b class="torq-body2">#7FAE1B</b>
-        </div>
-
+        <h6> {{ .Name }} </h6>
+        <b class="torq-body2">{{.Hex}}</b>
     </div>
 
+    {{end}}
+</div>
 
+<!-- Data Viz Swatches -->
+<h4>Data Viz</h4>
+<div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; width: 786px; margin-bottom: 50px;">
 
-    <!--Data Viz Swatches-->
+    {{ range .Page.Params.dataViz}}
 
-    <h5>Data Visualization</h5>
-    <div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; width: 786px; margin-bottom: 50px;">
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #F97DD8;">
-            </div>
-            <h6>Data Pink</h6>
-            <b class="torq-body2">#F97DD8</b>
+    <div class="color-values">
+        <div class="swatch" style="background-color: {{.Hex}};">
         </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #9150E4;">
-            </div>
-            <h6>Data Purple</h6>
-            <b class="torq-body2">#9150E4</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #50CCE4;">
-            </div>
-            <h6>Data Teal</h6>
-            <b class="torq-body2">#50CCE4</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #61D883;">
-            </div>
-            <h6>Data Green</h6>
-            <b class="torq-body2">#61D883</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #E4CB50">
-            </div>
-            <h6>Data Yellow</h6>
-            <b class="torq-body2">#E4CB50</b>
-        </div>
-
-        <div class="color-values">
-            <div class="swatch" style="background-color: #E4A350">
-            </div>
-            <h6>Data Orange</h6>
-            <b class="torq-body2">#E4A350</b>
-        </div>
+        <h6> {{ .Name }} </h6>
+        <b class="torq-body2">{{.Hex}}</b>
     </div>
+
+    {{end}}
+</div>

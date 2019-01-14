@@ -8,48 +8,43 @@ pagetype = "design"
 
 
 
-fightUI = [
-{Hex = "#ffffff", Sass= "", Use = "Title Bar & Cards"}, 
-{Hex = "#F7F7FB", Sass= "", Use = "Top Bar"}, 
-{Hex = "#C7D4DD", Sass= "", Use = "Outline"},
-{Hex = "#202028", Sass= "", Use = "Header Text"}, 
-{Hex = "#2C404C", Sass= "", Use = "Text"}, 
-{Hex = "#596578", Sass= "", Use = "Chart Titles & Subtext"}, 
-{Hex = "#508BE4", Sass= "", Use = "Primary"}
+lightUI = [
+{ Name = "Light Blue 1", Hex = "#F7F7FB", Use = "Top Bar"}, 
+{ Name = "Light Blue 2", Hex = "#C7D4DD", Use = "Grids, Tables & Outlines"}, 
+{ Name = "Light Blue 3", Hex = "#57657A", Use = "Chart & Sub-text"}, 
+{ Name = "Light Blue 4", Hex = "#202028", Use = "Text & Icons"}, 
+{ Name = "White",        Hex = "#FFFFFF", Use = "Title Bar & Cards"}, 
+{ Name = "Torq Blue",    Hex = "#508BE4", Use = "Action or Selected Items"} 
 ]
 
 darkUI = [
-{Hex = "#151E26", Sass= "", Use = "Title Bar"}, 
-{Hex = "#1D2E40", Sass= "", Use = "Top Bar & Cards"}, 
-{Hex = "#66757F", Sass= "", Use = "Outlines"},
-{Hex = "#FFFFFF", Sass= "", Use = "Header & Body Text"}, 
-{Hex = "#A8B5BF", Sass= "", Use = "Chart & Subtext"},  
-{Hex = "#508BE4", Sass= "", Use = "Primary"}
+{ Name = "Dark Blue 1", Hex = "#A8B5BF", Use = "Chart & Sub-text"}, 
+{ Name = "Dark Blue 2", Hex = "#66757F", Use = "Grids, Tables & Outlines"}, 
+{ Name = "Dark Blue 3", Hex = "#1D2E40", Use = "Title Bar & Cards"}, 
+{ Name = "Dark Blue 4", Hex = "#141E27", Use = "Top Bar"}, 
+{ Name = "White",       Hex = "#FFFFFF", Use = "Text & Icons"}, 
+{ Name = "Torq Blue",   Hex = "#508BE4", Use = "Action or Selected Items"} 
 ]
 
-status  = [
-{Hex = "#F34336", Sass= "", Use = ""},
-{Hex = "#FF8B3A", Sass= "", Use = ""},
-{Hex = "#FEC600", Sass= "", Use = ""},
-{Hex = "#7FAE1B", Sass= "", Use = ""}
+statusColors = [
+{ Name = "Status Red",    Hex = "#F34336"},
+{ Name = "Status Orange", Hex = "#FF8B3A"},
+{ Name = "Status Yellow", Hex = "#FEC600"},
+{ Name = "Status Green",  Hex = "#7FAE1B"}
 ]
  
 
-dataVis = [{Hex = "#ffffff", Sass= "", Use = ""}]
+dataViz = [
+{ Name = "Data Pink",   Hex = "#F97DD8"},
+{ Name = "Data Purple", Hex = "#9150E4"},
+{ Name = "Data Teal",   Hex = "#50CCE4"},
+{ Name = "Data Green",  Hex = "#61D883"},
+{ Name = "Data Yellow", Hex = "#E4CB50"},
+{ Name = "Data Orange", Hex = "#E4A350"}
+]
+ 
 
-[lightUI]
-    [lightUI.1]
-        Hex = "ffffff"
-        Sass= ""
-        Use = "Title Bar & Cards"
-    [lightUI.2]
-        Hex = "#F7F7FB"
-        Sass= ""
-        Use = "Top Bar"
-    [lightUI.3]
-        Hex = "#C7D4DD"
-        Sass= ""
-        Use = "Outline"
+
 +++
 
 

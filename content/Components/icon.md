@@ -9,8 +9,3 @@ lightThumbnail = "/images/icon.png"
 title = "Icon"
 
 +++
-{{% card %}}  
-
-#### This is a Test
-
- {{% /card %}} 

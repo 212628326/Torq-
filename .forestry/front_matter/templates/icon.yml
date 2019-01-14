@@ -1,0 +1,15 @@
+---
+label: Icon
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Icon Name
+  name: name
+  description: What is the name of the icon
+  config:
+    required: true
+- type: file
+  label: Icon Image
+  name: image
+  description: upload an image of the icon

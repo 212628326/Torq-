@@ -16,7 +16,7 @@ githubLink = ""
 +++
 
 
-{{% card %}}
+
 #### Setup
 
 ##### Installation
@@ -24,8 +24,6 @@ Using the command line, install the typography component into your project using
     
     npm i @torq-design/typography
 
-\
-\
 
 ##### Import Sass Styles
 Import the SCSS styles into your base styling file.
@@ -33,9 +31,6 @@ Import the SCSS styles into your base styling file.
     @import "@torq-design/typography/torq-typography";
 
 Make sure your project's SASS compiler is configured to look in the node_modules directory.
-
-\
-\
 
 
 ##### Import Font
@@ -62,11 +57,8 @@ Each font profile also has an accompanying CSS class.
 
     <div class="torq-typ--section-header">This is also a section header.</div>
 
-{{% /card %}}
 
 
-
-{{% card %}}
 #### CSS Classes
 
 | Class Name |  Description |
@@ -81,10 +73,7 @@ Each font profile also has an accompanying CSS class.
 | `torq-body2`| Sets font to Body 2 |
 | `torq-chart__title`| Sets font to Chart Title |
 
-{{% /card %}}
 
-
-{{% card %}}
 #### Font Weights
 
 | Weight |  Value | CSS Class |
@@ -99,4 +88,3 @@ Adjust font weights using the available CSS classes.
 
     <div class="weight--bold">This is some bold text.</div>
 
-{{% /card %}}

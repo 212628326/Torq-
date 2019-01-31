@@ -1,6 +1,13 @@
+//Color Palette
+@import "color-palette";
+
+//================================================================================
+// Styles for the Side Navigation Bar
+//================================================================================
+
+
 article>aside {
-    //background-color: #F7F7FB;
-    background-color: #FFFFFF;
+    background-color: $white;
     bottom: 0;
     box-sizing: border-box;
     display: -webkit-box;
@@ -11,12 +18,13 @@ article>aside {
     -ms-flex-direction: column;
     flex-direction: column;
     left: 0;
-    padding: 2rem 0rem 1rem 0rem;
+    padding: 40px 0rem 1rem 0rem;
+    
     position: fixed;
     top: 3.5rem;
-    width: 15rem;
+    width: 13rem;
     overflow-y: auto;
-    border-right: 1px solid #C7D4DD;
+    border-right: 1px solid $border-blue;
 
     .menu {
         line-height: 2rem;
@@ -40,6 +48,8 @@ article>aside {
             padding-left: 1rem;
             list-style: none;
             font-size: 15px;
+            margin-top: 4px;
+            margin-bottom: 4px;
 
             &.alwaysopen>ul {
                 display: block

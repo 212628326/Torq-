@@ -13,7 +13,7 @@ githubLink = ""
 +++
 
 
-{{% card %}}
+
 #### Setup
 
 ##### Installation
@@ -26,10 +26,10 @@ Using the command line, install the button component into your project using the
 Import the component into your sass file 
 
     import @torq-design/button
-{{% /card %}}
 
 
-{{% card %}}
+
+
 #### HTML Structure 
 ##### Primary Button
 
@@ -57,12 +57,12 @@ Import the component into your sass file
         Secondary Outlined
     </button>
 
-{{% /card %}}
 
 
 
 
-{{% card %}}
+
+
 #### CSS Classes
 
 | Class Name |  Description |
@@ -72,10 +72,7 @@ Import the component into your sass file
 | `mdc_button--unelevated`| Optional. Styles a contained button that is flush with the surface. |
 | `mdc-button--outlined`| Optional. Styles an outlined button that is flush with the surface. |
 | `mdc-button__icon`| Optional. Indicates an icon element.|
-{{% /card %}}
 
-
-{{% card %}}
 #### Sass Mixins
 
 | Class Name |  Description |
@@ -88,4 +85,3 @@ Import the component into your sass file
 |`mdc-button-outline-color($color)`|  Sets the outline color to the given color.|
 |`mdc-button-outline-width($width, $padding)`|  Sets the outline width to the given number (defaults to 2px) and adjusts padding accordingly. `$padding` is only required in cases where `mdc-button-horizontal-padding` is also included with a custom value.|
 
-{{% /card %}}

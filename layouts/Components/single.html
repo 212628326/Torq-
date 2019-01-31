@@ -4,108 +4,76 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 
 <body>
-    <div class="left">
-        <div style="display: flex; align-content: center; justify-content: space-between; width: 80%; margin-top: 30px;">
-            <h3>{{.Title}} </h3>
-            <div class="darkswitch">
+    <div class="componentLayout">
+        <div style="display: flex; align-content: center; justify-content: space-between; ">
+            <h3 class="doc-header">{{.Title}} </h3>
 
-                <!--  <label>Dark Theme</label>-->
+            <!--Dark Switch-->
+            <div class="darkswitch">
                 <div class="mdc-switch" data-mdc-auto-init="MDCSwitch">
                     <div class="mdc-switch__track"></div>
                     <div class="mdc-switch__thumb-underlay">
                         <div class="mdc-switch__thumb">
                             <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" role="switch"
-                                onclick="myFunction()">
+                                onclick="toggle()">
                         </div>
                     </div>
                 </div>
+
+                <!--Label for Dark Switch-->
+                <span style="margin-left: 15px; font-weight: 500;">Dark UI</span>
             </div>
+            
 
         </div>
 
         <div class="titlebar">
-            <div class="description">
-                {{.Page.Description}}
-            </div>
-            <!-- Rounded switch -->
+            {{.Page.Description}}
         </div>
 
-        <a href={{.Page.Params.demoLink}} target="_blank">
-            <div class="demo">
-                <img id="light" src="{{ .Page.Params.lightThumbnail}}"> </img>
-                <img id="dark" style="display: none;" src="{{ .Page.Params.darkThumbnail}}"> </img>
-
-                <!--<a href = {{.Page.Params.demoLink}}> show demo</a>-->
-            </div>
-        </a>
-
-
-        <!--TABS TO SELECT BETWEEN TORQ COMPONENTS AND WEB COMPONENTS-->
-        <div class="mdc-tab-bar component" role="tablist" data-mdc-auto-init="MDCTabBar">
-            <div class="mdc-tab-scroller">
-                <div class="mdc-tab-scroller__scroll-area">
-                    <div class="mdc-tab-scroller__scroll-content">
-
-                        <button class="mdc-tab component mdc-tab--active" role="tab" aria-selected="true" onclick="openCity(event, 'torq-component')"
-                            id="defaultOpen">
-                            <span class="mdc-tab__content">
-                                <span class="mdc-tab__text-label">Torq Component</span>
-                            </span>
-                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                            </span>
-                            <span class="mdc-tab__ripple"></span>
-                        </button>
-
-                        <button class="mdc-tab component" role="tab" aria-selected="true" onclick="openCity(event, 'web-component')">
-                            <span class="mdc-tab__content">
-                                <span class="mdc-tab__text-label">Web Component</span>
-                            </span>
-                            <span class="mdc-tab-indicator">
-                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                            </span>
-                            <span class="mdc-tab__ripple"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!--INITIALIZES THE MDC WEB COMPONENTS USED ON THE PAGE-->
         <script>
             mdc.autoInit();
         </script>
+        
+        <!--Displays the component image-->
+            <div class="demo">
+                <img id="light" src="{{ .Page.Params.lightThumbnail}}"> </img>
+                <img id="dark" style="display: none;" src="{{ .Page.Params.darkThumbnail}}"> </img>
+            </div>
+        
+        </div>
 
-        <!--
-<div class="tab" style= "margin-top: 30px;">
-  <button class="tablinks" onclick="openCity(event, 'torq-component')" id="defaultOpen">Torq Component</button>
-  <button class="tablinks" onclick="openCity(event, 'web-component')">Web Component</button>
-</div>-->
+       
+
+<div class="tab">
+    <button class="tablinks" onclick="tabSwitch(event, 'torq-component')"  id="defaultOpen"> Vanilla Component</button>
+    <button class="tablinks" onclick="tabSwitch(event, 'web-component')">Web Component</button>
+    <div class ="tablinks2"></div>
+  </div>
+
+  
 
 
-
-
+<div class="componentLayout"> 
         <!--this is the tab content for a standard component-->
         <div id="torq-component" class="tabcontent">
 
-            <div style="margin-top: 15px; margin-bottom: 30px;">
-                <span style="margin-right: 20px;">
-                    <a href="{{.Page.Params.demoLink}}" target="_blank"> View StackBlitz Demo</a>
+            <div class="iconLayout">
+                <span style="margin-right: 30px; ">
+                    <a href="{{.Page.Params.githubLink}}" target="_blank" class = "link"><i class="fab fa-github iconSize"></i>View Github</a>
                 </span>
 
-                <span>
-                    <a href="{{.Page.Params.githubLink}}" target="_blank">View Github</a>
+                <span style="margin-right: 30px;">
+                    <a href="{{.Page.Params.demoLink}}" target="_blank" class = "link"><i class="fas fa-external-link-alt iconSize"></i>View Demo</a>
                 </span>
             </div>
 
-    
             {{.Content}}
-
             {{ partial "flex/tablecontents.html" . }}
-           
 
         </div>
 
@@ -119,22 +87,18 @@
             {{ range where .Site.Pages "Type" "=" "web" }}
                 {{ if eq $webcomponent .Title}}
                 
-                <div style="margin-top: 15px; margin-bottom: 30px;">
-                    <span style="margin-right: 20px;">
-                        <a href="{{.Params.demoLink}}" target="_blank"> View StackBlitz Demo</a>
+                <div class="iconLayout">
+                    <span style= "margin-right: 30px;">
+                        <a href="{{.Params.githubLink}}" target="_blank" class ="link"><i class="fab fa-github iconSize"></i>View Github</a>
                     </span>
     
                     <span>
-                        <a href="{{.Params.githubLink}}" target="_blank">View Github</a>
+                        <a href="{{.Params.demoLink}}" target="_blank" class = "link"><i class="fas fa-external-link-alt iconSize"></i>View Demo</a>
                     </span>
                 </div>
                 
-                
                     {{ .Content }}
-                   
-
-                    {{ partial "flex/tablecontents.html" . }}
-
+            
                 {{ end }}
             {{ end }}
             
@@ -146,7 +110,7 @@
 
     <!--switches the components from light to dark-->
     <script>
-        function myFunction() {
+        function toggle() {
             var light = document.getElementById("light");
             var dark = document.getElementById("dark");
             var checkBox = document.getElementById("basic-switch");
@@ -159,14 +123,13 @@
                 light.style.display = "block";
                 dark.style.display = "none";
             }
-
         }
 
     </script>
 
 
     <script>
-        function openCity(evt, cityName) {
+        function tabSwitch(evt, docType) {
             var i, tabcontent, tablinks;
             var partial = document.getElementById ("TOCpartial");
             var partial2 = document.getElementById ("TOCpartial2");
@@ -181,10 +144,9 @@
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
-            document.getElementById(cityName).style.display = "block";
+            document.getElementById(docType).style.display = "block";
             evt.currentTarget.className += " active";
-            
-            
+              
         }
 
         // Get the element with id="defaultOpen" and click on it
@@ -192,7 +154,7 @@
     </script>
 
 
-    </div>
+</div> 
 
 
 </body>

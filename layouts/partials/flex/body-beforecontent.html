@@ -92,7 +92,9 @@
 
 </header>-->
 
+
 <header>
+
 <div class="mdc-top-app-bar mdc-top-app-bar--fixed" data-mdc-auto-init="MDCTopAppBar">
     <div class="mdc-top-app-bar__row">
       <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
@@ -100,6 +102,7 @@
           <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
                 <div class="mdc-tab-scroller__scroll-content">
+
                   <a class="mdc-tab" href="/" role="tab" aria-selected="true" id="/">
                     <span class="mdc-tab__content">
                       <span class="mdc-tab__text-label">Home</span>
@@ -109,16 +112,20 @@
                     </span>
                     <span class="mdc-tab__ripple"></span>
                   </a>
-                  <a class="mdc-tab" role="tab" href="/about/about_torq" aria-selected="true" id="/about">
+
+                  {{range .Site.Menus.mainmenu}}
+                  <a class="mdc-tab" role="tab" href="{{.URL}}" aria-selected="true" id="/{{lower .Name}}">
                     <span class="mdc-tab__content">
-                      <span class="mdc-tab__text-label">About</span>
+                      <span class="mdc-tab__text-label">{{.Name}}</span>
                     </span>
                     <span class="mdc-tab-indicator mdc-tab-indicator--fade">
                       <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                     </span>
                     <span class="mdc-tab__ripple"></span>
                   </a>
-                  <a class="mdc-tab" role="tab" href="/components" aria-selected="true" id="/components">
+
+                 {{end}}
+                  <!--<a class="mdc-tab" role="tab" href="/components" aria-selected="true" id="/components">
                     <span class="mdc-tab__content">
                       <span class="mdc-tab__text-label">Components</span>
                     </span>
@@ -144,7 +151,7 @@
                       <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                     </span>
                     <span class="mdc-tab__ripple"></span>
-                  </a>
+                  </a>-->
                 </div>
             </div>
           </div>
@@ -153,6 +160,7 @@
       </div>
     </div>
   
+
    <!-- {{- if not .Site.Params.disableSearch}}
     
       <div class="searchbox">
@@ -174,10 +182,10 @@
   
     {{- end}}-->
 <div style="font-size: 20px;">
-    <a href="https://guides.github.com/features/mastering-markdown/" target="_blank"><i class='fa fa-github giticon'></i></a>
+    <a href="https://guides.github.com/features/mastering-markdown/" target="_blank"><i class="fab fa-github"></i></a>
 </div>
   </header>
- 
+
 
 
   <script>
@@ -204,12 +212,12 @@
   </script>
 <!--end header-->
 
-<!--
 
+<!--
   <script>
       mdc.autoInit(); 
 
-      $(function () {
+     $(function () {
         setNavigation();
       });
 

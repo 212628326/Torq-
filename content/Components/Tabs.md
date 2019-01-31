@@ -8,7 +8,7 @@ pageType ="components"
 componentType = "torq" #Enter the type of component. Standard or Web
 lightThumbnail = "/images/lightThumbnails/Tabs.png"    #image path for light thumbnail
 darkThumbnail = "/images/darkThumbnails/Tabs.png"     #image path for dark thumbnail 
-lightDemo = "<div class='mdc-tab-bar' role='tablist'><div class='mdc-tab-scroller'><div class='mdc-tab-scroller__scroll-area'><div class='mdc-tab-scroller__scroll-content'><button class='mdc-tab mdc-tab--active' role='tab' aria-selected='true' tabindex='0'><span class='mdc-tab__content'><span class='mdc-tab__text-label'>Torq Design</span></span><span class='mdc-tab-indicator mdc-tab-indicator--active'><span class='mdc-tab-indicator__content mdc-tab-indicator__content--underline'></span></span> <span class='mdc-tab__ripple'></span></button></div></div></div></div>" #Enter HTML for Light version
+lightDemo = "" #Enter HTML for Light version
 darkDemo = "" #Enter HTML for Dark version
 demoLink = ""
 githubLink = ""
@@ -35,9 +35,7 @@ Import the component styles into your sass file
     @import "@material/tab-bar/mdc-tab-bar";
     @import "@material/tab-scroller/mdc-tab-scroller";
 
-\
-\
-\
+
 #### HTML Structure 
     <div class="mdc-tab-bar" role="tablist">
         <div class="mdc-tab-scroller">
@@ -57,9 +55,6 @@ Import the component styles into your sass file
             </div>
         </div>
     </div>
-\
-\
-\
 
 #### CSS Classes
 
@@ -69,9 +64,6 @@ Import the component styles into your sass file
 | align |  horizontal align button on page |
 | theme | `default`, `primary` , `success`,`info`,`warning`,`danger` |
 
-\
-\
-\
 
 #### Sass Mixins
 
@@ -81,9 +73,7 @@ Import the component styles into your sass file
 | align |  horizontal align button on page |
 | theme | `default`, `primary` , `success`,`info`,`warning`,`danger` |
 
-\
-\
-\
+
 
 #### Javascript Classes
 
@@ -93,9 +83,6 @@ Import the component styles into your sass file
 | align |  horizontal align button on page |
 | theme | `default`, `primary` , `success`,`info`,`warning`,`danger` |
 
-\
-\
-\
 
 #### Javascript Attributes
 
@@ -105,9 +92,7 @@ Import the component styles into your sass file
 | align |  horizontal align button on page |
 | theme | `default`, `primary` , `success`,`info`,`warning`,`danger` |
 
-\
-\
-\
+
 
 #### Javascript Functions
 
@@ -117,9 +102,6 @@ Import the component styles into your sass file
 | align |  horizontal align button on page |
 | theme | `default`, `primary` , `success`,`info`,`warning`,`danger` |
 
-\
-\
-\
 
 #### Events
 | Class Name |  Description |

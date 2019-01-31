@@ -6,6 +6,7 @@
 <link href="{{"css/font-awesome.min.css" | relURL}}" rel="stylesheet">
 <link href="{{"css/nucleus.css" | relURL}}" rel="stylesheet">
 <link href="{{(printf "theme-%s/style.css" (.Site.Params.themeStyle| default "flex")  ) | relURL}}" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 
 {{with .Site.Params.themeVariant}}
@@ -13,7 +14,9 @@
 {{end}}
 <link rel="stylesheet" href="{{"css/bootstrap.min.css" | relURL}}">
 <script src="{{"js/jquery-2.x.min.js" | relURL}}"></script>
+
 <script type="text/javascript">
       var baseurl = "{{.Site.BaseURL}}";
 </script>
+
 {{ partial "custom-head.html" . }}

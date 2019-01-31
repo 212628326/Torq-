@@ -1,8 +1,9 @@
 {{ define "main"}}
 
-<body class="torqtype">
+<body class="componentListLyout">
     <h3> {{.Title}} </h3>
 
+    <!--
     <div class="mdc-layout-grid" style="width: 80%; margin-left: 0; padding-left: 0;">
         <div class="mdc-layout-grid__inner">
             {{ range .Site.Pages.ByTitle }}
@@ -11,20 +12,43 @@
             <div class="mdc-layout-grid__cell ">
 
             <a href="{{.URL}}">
-                <div class="mdc-card-outlined ">
+                <div class="mdc-card--outlined ">
                     <span class="card-label">
                         <h5>{{.Title}}</h5>
                     </span>
+                    <div style="display: flex; align-items:center; justify-content: center;">
                         <img src='{{.Params.lightThumbnail}}' class="thumbnail"></img>
+                    </div>
                 </div>
             </a>
             </div>
             {{ end }}
             {{ end }}
         </div>
-    </div>
-</body>
+    </div>-->
 
+
+    
+            <div class="component-group">
+
+                {{ range .Site.Pages.ByTitle }}
+                {{if and (eq .Params.componentType "torq") (ne .Params.menu "mainmenu")}}
+    
+                <a href="{{.URL}}">
+                    <div class="component-image">
+                        <span><h5> {{ .Title}} </h5></span>
+                        <div style="display: flex; align-items:center; justify-content: center;">
+                            <img src='{{.Params.lightThumbnail}}' class="thumbnail"></img>
+                        </div>
+                    </div>
+                </a>
+                    {{end}}
+                    {{end}}
+                </div>
+ 
+
+
+</body>
 
 
 

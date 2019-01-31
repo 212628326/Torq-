@@ -1,3 +1,8 @@
+
+
+//Color Palette
+@import "color-palette";
+
 article {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -25,27 +30,29 @@ article section.page {
     -ms-flex: 1;
     flex: 1;
     box-sizing: border-box;
-    margin: 0 1rem 0 15rem;
+    margin: 0 1rem 0 13rem;
+    padding-top: 45px;
     overflow-y: auto;
-    padding: 2rem 4rem;
+    //padding: 2rem 4rem;
+    
 
 
  
     table {
-        width: 100%;
+        //width: 90%;
         margin-bottom: 2em;
         border-collapse: collapse;
         border-spacing: 0;
-        //border: 1px solid #e6e6e6;
 
 
         td {
             padding: 0.5rem;
             height: 40px;
             vertical-align: middle;
-            border-bottom: 1px solid #C7D4DD;
-            border-top: 1px solid #C7D4DD;
-            //border: 1px solid #C7D4DD;
+            border-bottom: 1px solid $border-blue;
+            border-top: 1px solid $border-blue;
+
+           
             
         }
 
@@ -56,6 +63,12 @@ article section.page {
             }
         }
     }
+
+    table.type {
+        table-layout: auto;
+
+    }
+
     // IMAGES
     img {
         border: 0;
@@ -89,7 +102,8 @@ article section.page {
 
 
     code {
-        font-family: 'RobotoMono', monospace
+        font-family: 'RobotoMono', monospace;
+        
     }
 
     p>code,
@@ -101,13 +115,11 @@ article section.page {
     // Code Block Styles
     pre {
         
-        //background-color: #F7F7FB;
-        background-color: rgba(249, 125, 216, .17);
-        border: 1px solid #F97DD8;
-        //border-radius: .2rem;
-        color: #2C404C;
+        background-color: $accent-blue;
+        color: $font-color;
         overflow: auto;
-        padding: .5rem;
+        //padding: .5rem;
+        margin: 0px 0 40px 0;
 
         .copy-to-clipboard {
             float: right;
@@ -134,7 +146,7 @@ article section.page {
 
     pre.language-headers+pre {
         border-radius: 0 0 .2rem .2rem;
-        margin-top: -1.7rem;
+        //margin-top: -1.7rem;
         padding-top: .52rem;
         position: relative
     }

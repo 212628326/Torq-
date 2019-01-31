@@ -1,5 +1,5 @@
 +++
-title= "DEVELOP"
+title= "Develop"
 description = ""
 weight = 4
 menu = "mainmenu"

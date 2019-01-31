@@ -1,138 +1,69 @@
 //Google Material Imports
-@import "@material/button/mdc-button";
 @import "@material/card/mdc-card";
 @import "@material/switch/mdc-switch";
-@import "@material/layout-grid/mdc-layout-grid";
-@import "@material/image-list/mdc-image-list";
+@import "@material/card/mdc-card";
+@import "@material/tab/mdc-tab";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "color-palette";
+
+
+//================================================================================
+// Material Design Tab Component
+//================================================================================
 
 
 
-//------TORQ COLORS------------------------------------------------
-
-$torq-primary-action: #508BE4;
-$torq-dark-background: linear-gradient(185.86deg, #1A2633 0%, #101820 100%);
-$torq-light-background: linear-gradient(176.98deg, #FFFFFF 0%, #D6DFEC 100%);
-$torq-menu-text-color: #596578;
-
-
-//------BUTTON DEMO-------------------------------------------------
-
-
-.torq-page__background {
-  max-height: 100%;
-  background: $torq-light-background;
-  position: static;
-  background-attachment: fixed;
-}
-
-.torq-button, .torq-button--primary {
-  @extend .mdc-button;
-  @include mdc-button-container-fill-color(#02B989);
-  @include mdc-button-ink-color(#ffffff);
-  @include mdc-button-shape-radius(0);
-  @include mdc-states-base-color(rgb(9, 128, 96));
-  @include mdc-states-hover-opacity(.1);
-  @include mdc-states-focus-opacity(.3);
-  @include mdc-states-press-opacity(.4);
-}
-
-.torq-button--secondary {
-  @extend .mdc-button;
-  @include mdc-button-container-fill-color(#909699);
-  @include mdc-button-ink-color(#ffffff);
-  @include mdc-button-shape-radius(0);
-}
-
-.torq-button--outlined, .torq-button--primary-outlined {
-  @extend .mdc-button--outlined;
-  @include mdc-button-ink-color(var(--torq-primary-button-color, #508BE4));
-  @include mdc-button-outline-color(var(--torq-primary-button-color, #508BE4));
-  @include mdc-button-container-fill-color(transparent);
-  @include mdc-button-shape-radius(0);
-  @include mdc-button-outline-width(1px, 10px);
-  @include mdc-button-horizontal-padding(15px);
-  height: 40px;
-}
-
-.torq-button--secondary-outlined {
-  @extend .mdc-button--outlined;
-  @include mdc-button-ink-color(var(--torq-secondary-button-color, #909699));
-  @include mdc-button-outline-color(var(--torq-secondary-button-color, #909699));
-  @include mdc-button-container-fill-color(transparent);
-  @include mdc-button-shape-radius(0);
-  @include mdc-button-outline-width(1px, 10px);
-  @include mdc-button-horizontal-padding(15px);
-}
-
-.torq-button, .torq-button--secondary, .torq-button--outlined, .torq-button--outlined_secondary {
-  text-transform: none; 
-}
-
-.torq-button-dark, .torq-button--primary {
-  @extend .mdc-button;
-  @include mdc-button-container-fill-color(#000000);
-  @include mdc-button-ink-color(#ffffff);
-  @include mdc-button-shape-radius(0);
-  @include mdc-states-base-color(rgb(9, 128, 96));
-  @include mdc-states-hover-opacity(.1);
-  @include mdc-states-focus-opacity(.3);
-  @include mdc-states-press-opacity(.4);
-  text-transform: none; 
-}
-
-.torq-button-dark--secondary {
-  @extend .mdc-button;
-  @include mdc-button-container-fill-color(#909699);
-  @include mdc-button-ink-color(#ffffff);
-  @include mdc-button-shape-radius(0);
-  text-transform: none; 
-}
-
-.mdc-card--outlined{
-  height: 220px;
-  width: 95%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding: 5%;
-  display: flex;
-  @include mdc-card-fill-color(#ffffff);
-  @include mdc-card-outline(#C7D4DD, 1px);
-
-}
-
-
-//-----TAB DEMO--------------------------------------------
+//================Top Navigation Tab Bar =========================================
 .mdc-tab {
-  @include mdc-tab-fixed-width(140px);
+  @include mdc-tab-fixed-width(150px);
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 20px;
+  margin-left: 10px;
   text-transform: none;
-  font-weight: 500;
-  @include mdc-states($torq-primary-action, false);
-  @include mdc-tab-text-label-color($torq-menu-text-color);
+  font-weight: 300;
+  @include mdc-tab-text-label-color($white);
+
 }
 
-.mdc-tab.dark, .dark .mdc-tab {
-  @include mdc-tab-text-label-color(#ffffff);
-}
-
-
-.mdc-tab__text-label {
-  font-size: 15px;
-}
-
-.mdc-tab__ripple {
-  @include mdc-states($torq-primary-action, false);
-}
 
 .mdc-tab-indicator {
   @include mdc-tab-indicator-underline-height(5px);
-  @include mdc-tab-indicator-underline-color($torq-primary-action);
-  opacity: 85%;
+  @include mdc-tab-indicator-underline-color($white);
 }
+
 
 .mdc-top-app-bar .mdc-tab-bar {
   //margin-left: 68px;
    margin-left: 0px;
 }
 
+.mdc-tab__text-label {
+  font-size: 15px;
+  opacity: 1;
+}
 
+//Removes the Tab Ripple effect
+.mdc-tab__ripple::before, .mdc-tab__ripple::after {
+  background-color: $header-blue; }
+  @supports not (-ms-ime-align: auto) {
+    .mdc-tab__ripple::before, .mdc-tab__ripple::after {
+      /* @alternate */
+      background-color: var($header-blue, $header-blue); } }
+.mdc-tab__ripple:hover::before {
+  opacity: 0.04; }
+.mdc-tab__ripple:hover::before {
+  opacity: 0; }
+
+
+  .mdc-tab--active {
+    @include mdc-tab-text-label-color($white);
+    font-weight: 500;
+
+    .mdc-tab__text-label{
+      transition-delay: 100ms;
+      opacity: 1;
+    }
+  }

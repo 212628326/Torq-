@@ -6,11 +6,11 @@ author = ""
 version = ""
 type = "web" 
 pageType ="components"
-componentType = "web" #Enter the type of component. Standard or Web
+componentType = "web" #Enter the type of component. Torq or Web
 lightThumbnail = "" #image path for dark thumbnail
 darkThumbnail = "" #image path for dark thumbnail 
-lightDemo = "" #Enter HTML for Light version
-darkDemo = "" #Enter HTML for Dark version
+demoLink = "" #Enter URL for component demo
+githubLink = ""#Enter URL for github repo
 
 
 +++

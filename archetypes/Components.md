@@ -8,8 +8,8 @@ pageType ="components"
 componentType = "torq" #Enter the type of component. Standard or Web
 lightThumbnail = "/images/lightThumbnails/{{replace .TranslationBaseName "-" " " | title}}.png"    #image path for light thumbnail
 darkThumbnail = "/images/darkThumbnails/{{replace .TranslationBaseName "-" " " | title}}.png"     #image path for dark thumbnail 
-demoLink = "" #Enter link for stackBlitz Demo
-githubLink = ""
+demoLink = "" #Enter URL for component demo
+githubLink = ""#Enter URL for github repo
 
 +++
 

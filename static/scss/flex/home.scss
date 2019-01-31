@@ -10,47 +10,16 @@
 @import "@material/image-list/mdc-image-list";
 //--------HOME PAGE SCSS---------------------------------------------------
 //--------TOP NAVIGATION-------------------
-.current {
-    //font-size: 0.79rem;
-    line-height: 1.025rem;
-    letter-spacing: 1.5px;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    height: 4rem;
-    line-height: 4rem;
-    overflow: hidden;
-    text-overflow: ellipsis; //white-space: nowrap;
-    box-sizing: border-box; //border-bottom: solid 0.125rem transparent;
-    border-bottom: 4px solid #508BE4;
-    font-weight: bold;
-}
+
 
 .quicklinks {
     width: 100%;
     height: 500px;
     display: inline-flex;
     align-items: center;
-    justify-content: center; //margin: 20px;
+    justify-content: center; 
 }
 
-.gelink {
-    //font-size: 0.79rem;
-    line-height: 1.025rem;
-    letter-spacing: 1.5px;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    height: 4rem;
-    line-height: 4rem;
-    cursor: pointer;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    box-sizing: border-box; //border-bottom: solid 0.125rem transparent;
-}
 
 .gelink:hover {
     height: 4rem;

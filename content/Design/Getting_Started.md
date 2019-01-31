@@ -7,26 +7,16 @@ weight = 1
 
 +++
 
-{{% card %}}
-##### Download Sketch Files here
+
+#### Sketch Files
 
 The Sketch file includes Torq component symbols, color swatches and sample layouts to help get you started.
 
-<button class='torq-button--outlined torq-button--primary-outlined '>
-        Download Sketch Files
-</button>
-\
-\
-\
+
+
+#### Fonts
+
+The Roboto font is used across all Torq applications. Download it for free here.
 
 
 
-##### Download Fonts here
-
-The Heebo font is used across all Torq applications. Download it for free here.
-
-<button class='torq-button--outlined torq-button--primary-outlined '>
-        Download Heebo Font
-</button>
-
-{{% /card %}}

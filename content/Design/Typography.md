@@ -6,7 +6,7 @@ pagetype = "design"
 title = "Typography"
 
 +++
-{{% card %}}
+
 
 #### Best Practices
 
@@ -28,4 +28,3 @@ our guidelines, the rest of the workflow should follow those same type rules set
 
 Although Heebo comes in Extra Bold and Black, TORQ discourages using them on web and ui applications.
 
-{{% /card %}}

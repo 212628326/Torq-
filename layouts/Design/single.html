@@ -7,38 +7,110 @@
 
 </head>
 
-<body>
+<body class="guideLayout">
     <div class="left">
         <div style="display: flex; align-content: center; justify-content: space-between; ">
-            <h3 >{{.Title}}</h3>
+            <h3>{{.Title}}</h3>
 
         </div>
-        
 
         <div>
-            <div class="description" >
-                
-                {{ if eq .Title "Colors"}}
-                    {{ partial "flex/color-swatches.html" . }}
+            <div style="width: 90%;">
 
+                <!--Layout for Color Guidelines-->
+                {{ if eq .Title "Colors"}}
+                {{ partial "flex/color-swatches.html" . }}
+                {{ partial "flex/tablecontents.html" . }}
                 {{end}}
 
+                <!--Layout for Typography Guidelines-->
                 {{ if eq .Title "Typography" }}
-                <div class="content-card"> 
-                    {{ partial "flex/typography-scale.html" . }}
-                </div>
-                {{end}} 
-
-               
-                    {{.Content}}
-               
-
+                <h4>Sizing Chart</h4>
+                {{ partial "flex/typography-scale.html" . }}
                 {{ partial "flex/tablecontents.html" . }}
+                {{end}}
+
+
+                <!--Layout for Iconography Guidelines
+                {{if eq .Title "Iconography"}}
+                <h4>Icon Sizes</h4>
+                    <h5>16 px Icons</h5>
+                    <div class="mdc-layout-grid" style="margin-left: 0; padding: 0 0 100px 0;">
+                        <div class="mdc-layout-grid__inner">
+                            {{ range .Page.Params.Medium }}
+
+                            <div class="mdc-layout-grid__cell--span-2 ">
+
+                                <a href="{{.URL}}">
+                                    <div class="mdc-card--outlined icon">
+                                        <div>
+                                            <img src='{{.Thumbnail}}' class="thumbnail icon"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                                <span class="card-label">
+                                    <h6>{{.Name}}</h6>
+                                </span>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+
+                    <h5>22 px Icons</h5>
+                    <div class="mdc-layout-grid" style="margin-left: 0; padding: 0 0 100px 0;">
+                        <div class="mdc-layout-grid__inner">
+                            {{ range .Page.Params.Medium }}
+
+                            <div class="mdc-layout-grid__cell--span-2 ">
+
+                                <a href="{{.URL}}">
+                                    <div class="mdc-card--outlined icon">
+                                        <div>
+                                            <img src='{{.Thumbnail}}' class="thumbnail icon"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                                <span class="card-label">
+                                    <h6>{{.Name}}</h6>
+                                </span>
+                            </div>
+
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ .Content}}
+
+                    {{else}}
+                    {{.Content}}
+                {{end}}-->
+                {{if eq .Title "Iconography"}}
+                <h4>Icon Sizes</h4>
+                <h5>16 px Icons</h5>
+
+                <div class="component-group">
+                    {{ range .Page.Params.Medium }}
+
+                    <div class="icon-image">
+                        <a href="{{.URL}}">
+                            <div style="height: 25px;">
+                                <img src='{{.Thumbnail}}'></img>
+                            </div>
+                        </a>
+                        <p>{{.Name}}</p>
+                    </div>
+                    {{ end }}
+                </div>
+
+
+                {{ .Content}}
+
+                {{else}}
+                {{.Content}}
+                {{end}}
+
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>

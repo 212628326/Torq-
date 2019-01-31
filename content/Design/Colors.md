@@ -4,7 +4,7 @@ date = "2018-11-05T14:43:26.000-06:00"
 description = ""
 pagetype = "design"
 title = "Colors"
-[[darkUI]]
+[[darkUI]] 
 Hex = "#A8B5BF"
 Name = "Dark Blue 1"
 Use = "Chart & Sub-text"
@@ -74,9 +74,6 @@ Use = "Action or Selected Items"
 Hex = "#7FAE1B"
 Name = "Status Green"
 [[statusColors]]
-Hex = "#508BE4"
-Name = "Status Blue"
-[[statusColors]]
 Hex = "#F34336"
 Name = "Status Red"
 [[statusColors]]
@@ -87,12 +84,9 @@ Hex = "#FEC600"
 Name = "Status Yellow"
 
 +++
-{{% card %}}
+
 #### Best Practices 
 
-Use Primary colors for their specific uses. And for action items and or items of importance please use default blue.
-
-Try your best to not put type on top of our secnodary colors, these include status colors and data viz colors. 
 
 ##### Hierarchy
 
@@ -102,4 +96,3 @@ Color indicates which elements are interactive, how they relate to other element
 
 Text and important elements, like icons, should meet legibility standards when appearing on colored backgrounds across all screen and device types.
 
-{{% /card %}}

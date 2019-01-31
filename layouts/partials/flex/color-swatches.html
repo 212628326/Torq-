@@ -1,8 +1,8 @@
 <!--Light Color Swatches-->
 
 
-<h4>Light UI Color Palette</h4>
-<div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; width: 786px; margin-bottom: 90px;">
+<h4>Light UI Colors</h4>
+<div class="color-group">
 
     {{ range .Page.Params.lightUI}}
 
@@ -18,8 +18,8 @@
 
 
 <!-- Dark Color Swatches -->
-<h4>Dark UI Color Palette</h4>
-<div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; width: 786px; margin-bottom: 90px;">
+<h4>Dark UI Colors</h4>
+<div class="color-group">
 
     {{ range .Page.Params.darkUI}}
 
@@ -33,9 +33,11 @@
     {{end}}
 </div>
 
-<!-- Dark Color Swatches -->
-<h4>Status Colors</h4>
-<div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; width: 786px; margin-bottom: 50px; ">
+
+<h4>Secondary Colors (Dark & Light UI)</h4>
+<!--Status Color Swatches -->
+<h5>Status Colors</h5>
+<div class="color-group">
 
     {{ range .Page.Params.statusColors}}
 
@@ -50,8 +52,8 @@
 </div>
 
 <!-- Data Viz Swatches -->
-<h4>Data Viz</h4>
-<div style="display: flex; flex-direction: row; justify-content: start; flex-wrap: wrap; width: 786px; margin-bottom: 50px;">
+<h5>Data Viz</h5>
+<div class="color-group">
 
     {{ range .Page.Params.dataViz}}
 

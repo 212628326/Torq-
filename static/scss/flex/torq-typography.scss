@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700,800');
 
+
+//Color Palette
+@import "color-palette";
+
 $torq-font-family: "Roboto", sans-serif !default;
 $mdc-typography-font-family: $torq-font-family;
 
@@ -30,6 +34,8 @@ html {
 //================================================================================
 // Standard Torq Typography Rules
 //================================================================================
+
+/*
 h1, .torq-h1 {
   font-size: 50px;
   font-weight: 400!important; //regular
@@ -118,3 +124,160 @@ h1, h2, h3, h4, h5, h6 {
   h6, b{
     margin-bottom: .5rem;
   }
+
+
+  //Site Typography
+
+  .doc-header {
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  .doc-description {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  */
+//================================================================================
+// Website Type Rules
+//================================================================================
+h1, .torq-h1 {
+  font-size: 50px;
+  font-weight: 400!important; //regular
+  line-height: 40px;
+  color: $font-color;
+}
+
+h2, .torq-h2 {
+  font-size: 38px;
+  font-weight: 400!important; //regular
+  //line-height: 25px;
+  color: $font-color;
+}
+
+//Page Headers
+h3 {
+  font-size: 36px;
+  font-weight: 700!important; //regular
+  line-height: 35px;
+  letter-spacing: 0;
+  color: $font-color;
+}
+
+//Section Headers
+h4 {
+  font-size: 24px;
+  font-weight: 700!important; //bold
+  color: $font-color;
+  border-radius: 20px;
+  box-shadow: 0 35px 0 0 $primary-blue;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  background: transparent;
+  height: 5px;
+  
+}
+
+//Title 1
+h5 {
+  font-size: 20px;
+  font-weight: 500!important; //bold
+  //line-height: 27px;
+  color: $font-color;
+  margin: 0;
+  padding: 10px 0 15px 0;
+}
+
+//Title 2
+h6, .torq-title2 {
+  font-size: 15px;
+  font-weight: 700!important; //bold
+  line-height: 26px;
+  color: $font-color;
+}
+
+//Body Copy & Buttons
+body, p{
+  font-size: 15px;
+  font-weight: 400!important; //medium
+  line-height: 26px;
+  color: $font-color;
+  padding: 0 0 15px 0;
+  margin: 0;
+}
+
+td {
+  font-size: 15px;
+  font-weight: 500!important; //medium
+  line-height: 26px;
+  color: #2C404C;
+}
+
+//Sub-Body Copy
+.torq-body2 {
+  font-size: 15px;
+  font-weight: 300!important; //light
+  line-height: 26px;
+  color: #596578;
+}
+
+//Chart Titles
+th, .torq-chart__title {
+  font-size: 13px;
+  font-weight: 500!important; //medium
+  line-height: 40px;
+  letter-spacing: 0.13px;
+  text-transform: uppercase;
+  color: #596578;
+}
+
+:host {
+  font-family: $torq-font-family;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  //margin: 0.85rem 0 1.7rem 0;
+  text-rendering: optimizeLegibility; }
+
+  h6, b{
+    margin-bottom: .5rem;
+  }
+
+
+
+//================================================================================
+// TORQ Typography Design Guidelines
+//================================================================================
+
+  //Section Headers
+
+//Page Headers
+h3.torq-page__header {
+  font-size: 24px;
+  font-weight: 400!important; //regular
+  line-height: 35px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+      h4.torq-section__header {
+      font-size: 20px;
+      font-weight: 700!important; //bold
+      line-height: 29px;
+      box-shadow: none;
+      color: #202028;
+      margin: 0;
+    
+    }
+
+    //Title 1
+ h5.torq-title1 {
+  font-size: 18px;
+  font-weight: 700!important; //bold
+  line-height: 27px;
+  color: #202028;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+

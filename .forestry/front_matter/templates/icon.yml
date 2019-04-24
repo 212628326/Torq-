@@ -1,7 +1,6 @@
 ---
 label: Icon
 hide_body: false
-is_partial: false
 fields:
 - type: text
   label: Icon Name
